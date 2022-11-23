@@ -1,67 +1,103 @@
 import * as d3 from 'd3';
-
-var x, y, xAxis, yAxis, svg, height;
+import './barchart.css';
 
 export const BarChart = (element) => {
-    // set the dimensions and margins of the graph
-    var margin = { top: 30, right: 30, bottom: 70, left: 60 };
-    var width = 460 - margin.left - margin.right;
-    height = 400 - margin.top - margin.bottom;
 
-    // append the svg object to the body of the page
-    svg = d3.select(element)
-    .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-        .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
+  var svg = d3.select(element),
+  margin = 200,
+  width = svg.attr("width") - margin,
+  height = svg.attr("height") - margin;
 
-    // Initialize the X axis
-    x = d3.scaleBand()
-    .range([ 0, width ])
-    .padding(0.2);
-    xAxis = svg.append("g")
-    .attr("transform", "translate(0," + height + ")")
+  svg.append("text")
+  .attr("transform", "translate(100,0)")
+  .attr("x", 50)
+  .attr("y", 50)
+  .attr("font-size", "24px")
+  .text("Stock Price")
 
-    // Initialize the Y axis
-    y = d3.scaleLinear()
-    .range([ height, 0]);
-    yAxis = svg.append("g")
-    .attr("class", "myYaxis")
+  var xScale = d3.scaleBand().range([0, width]).padding(0.4),
+      yScale = d3.scaleLinear().range([height, 0]);
 
-    update('var1');
-}
+  var g = svg.append("g")
+          .attr("transform", "translate(" + 100 + "," + 100 + ")");
 
-// A function that create / update the plot for a given variable:
-export const update = (selectedVar) => {
-    // Parse the Data
-    d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/barplot_change_data.csv", function(data) {
+  d3.csv("../csvFiles/stock_values.csv").then( function(data) {
+      xScale.domain(data.map(function(d) { return d.year; }));
+      yScale.domain([0, d3.max(data, function(d) { return d.value; })]);
+
+      g.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(xScale))
+      .append("text")
+      .attr("y", height - 250)
+      .attr("x", width - 100)
+      .attr("text-anchor", "end")
+      .attr("stroke", "black")
+      .text("Year");
+
+      g.append("g")
+      .call(d3.axisLeft(yScale).tickFormat(function(d){return "$" + d;}).ticks(10))
+      .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 10)
+      .attr('dy', '-5em')
+      .attr('text-anchor', 'end')
+      .attr('stroke', 'black')
+      .text('Stock Price in USD')
+
+      g.selectAll(".bar")
+      .data(data)
+      .enter().append("rect")
+      .attr("class", "bar")
+      .on("mouseover", onMouseOver) // Add listener for event
+      .on("mouseout", onMouseOut)
+      .attr("x", function(d) { return xScale(d.year); })
+      .attr("y", function(d) { return yScale(d.value); })
+      .attr("width", xScale.bandwidth())
+      .transition()
+      .ease(d3.easeLinear)
+      .duration(500)
+      .delay(function(d,i){ return i * 50})
+      .attr("height", function(d) { return height - yScale(d.value); });
+  })
   
-      // X axis
-      x.domain(data.map(function(d) { return d.group; }))
-      xAxis.transition().duration(1000).call(d3.axisBottom(x))
-  
-      // Add Y axis
-      y.domain([0, d3.max(data, function(d) { return +d[selectedVar] }) ]);
-      yAxis.transition().duration(1000).call(d3.axisLeft(y));
-  
-      // variable u: map data to existing bars
-      var u = svg.selectAll("rect")
-        .data(data)
-  
-      // update bars
-      u
-        .enter()
-        .append("rect")
-        .merge(u)
-        .transition()
-        .duration(1000)
-          .attr("x", function(d) { return x(d.group); })
-          .attr("y", function(d) { return y(d[selectedVar]); })
-          .attr("width", x.bandwidth())
-          .attr("height", function(d) { return height - y(d[selectedVar]); })
-          .attr("fill", "#69b3a2")
-    })
-  
+  // Mouseover event handler
+
+  function onMouseOver(d, i) {
+      // Get bar's xy values, ,then augment for the tooltip
+      var xPos = parseFloat(d3.select(this).attr('x')) + xScale.bandwidth() / 2;
+      var yPos = parseFloat(d3.select(this).attr('y')) / 2 + height / 2
+
+      // Update Tooltip's position and value
+      d3.select('#tooltip')
+          .style('left', xPos + 'px')
+          .style('top', yPos + 'px')
+          .select('#value').text(i.value)
+      
+      d3.select('#tooltip').classed('hidden', false);
+
+
+      d3.select(this).attr('class','highlight')
+      d3.select(this)
+          .transition() // I want to add animnation here
+          .duration(500)
+          .attr('width', xScale.bandwidth() + 5)
+          .attr('y', function(d){return yScale(d.value) - 10;})
+          .attr('height', function(d){return height - yScale(d.value) + 10;})
+
   }
+
+  // Mouseout event handler
+  function onMouseOut(d, i){
+      d3.select(this).attr('class','bar')
+      d3.select(this)
+          .transition()
+          .duration(500)
+          .attr('width', xScale.bandwidth())
+          .attr('y', function(d){return yScale(d.value);})
+          .attr('height', function(d) {return height - yScale(d.value)})
+      
+      d3.select('#tooltip').classed('hidden', true);
+  }
+
+}

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useInView } from 'react-intersection-observer';
 
 const Container = ({ children }) => {
-    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3, delay: 500 });
+    const { ref } = useInView({ triggerOnce: true, threshold: 0.3, delay: 500 });
     //let animatedClass = extClass + ' animate__animated animate__zoomIn';
 
     return (
