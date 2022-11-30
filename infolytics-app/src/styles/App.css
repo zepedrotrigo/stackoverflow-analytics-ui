@@ -1,0 +1,21 @@
+body {
+    background-color: #131827;
+}
+
+.container {
+    width: 75rem;
+    align-self: center;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: #1b2236;
+    border-radius: 15px;
+}
+
+.container.left {
+    width: 50rem;
+    margin-left: 0;
+    text-align: left;
+}
