@@ -66,6 +66,16 @@ function ready(error, topo) {
       .style("stroke", "transparent")
   }
 
+  let mouseClick = function(d) {
+    let country = d.properties.name.toLowerCase().replace(/\s+/g, '')
+
+    if (country in localStorage) {
+      localStorage.removeItem(country);
+    } else {
+      localStorage.setItem(country, true);
+    }
+  }
+
   // Draw the map
   svg.append("g")
     .selectAll("path")
@@ -86,6 +96,7 @@ function ready(error, topo) {
       .style("opacity", .8)
       .on("mouseover", mouseOver )
       .on("mouseleave", mouseLeave )
+      .on("click", mouseClick)
     }
 
 </script>
