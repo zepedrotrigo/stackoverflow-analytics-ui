@@ -1,17 +1,23 @@
 <!-- Code from d3-graph-gallery.com -->
 <!DOCTYPE html>
-<head>
-<meta charset="utf-8">
 
-<link rel="stylesheet" type="text/css" href="./styles/app.css" >
-<link rel="stylesheet" type="text/css" href="./styles/d3-tip.css" >
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="./styles/app.css">
+	<link rel="stylesheet" type="text/css" href="./styles/d3-tip.css">
 </head>
 
 
 <body>
 	<!-- Create an element where the map will take place -->
-	<div class="container left">
-		<svg id="my_dataviz"></svg>
+	<div class="flex-container">
+		<div class="container">
+			<svg id="my_dataviz"></svg>
+		</div>
+		<div class="container h-27">
+			<p id="selected-countries">Selected countries:</p>
+		</div>
 	</div>
 </body>
 

@@ -70,14 +70,17 @@ function ready(error, topo) {
 			.style("stroke", "transparent")
 	}
 
-	let mouseClick = function(d) {
-		console.log(d);
-		let country = d.properties.name
+	let mouseClick = function (d) {
+		let country = d.properties.name;
+		let paragraph = document.getElementById("selected-countries");
+
 
 		if (country in localStorage) {
 			localStorage.removeItem(country);
+			paragraph.textContent = paragraph.textContent.replace(country+", ", "");
 		} else {
 			localStorage.setItem(country, true);
+			paragraph.textContent += country+", ";
 		}
 	}
 

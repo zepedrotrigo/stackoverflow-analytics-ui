@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@800&family=Poppins&family=Roboto&family=Ubuntu&display=swap');
+
 body {
     background-color: #131827;
+    font-family: 'Roboto', sans-serif;
+    color:whitesmoke;
+}
+
+.flex-container {
+    display: flex;
 }
 
 .container {
@@ -10,4 +18,8 @@ body {
     padding: 2rem;
     background-color: #1b2236;
     border-radius: 15px;
+}
+
+.h-27 {
+    height: 27rem;
 }
