@@ -1,4 +1,4 @@
-import csv, os
+import csv, os, traceback, copy
 from urllib.request import urlopen
 from currency_converter import CurrencyConverter
 
@@ -44,10 +44,10 @@ def split_data_by_country():
             line = ""
 
 def calc_avg_salary_by_country():
+    '''Only takes into account full-time employees working full in-person'''
+
     c = CurrencyConverter()
     d = {} # {"Country": [SumOfCompTotal, NoOfRespondents]}
-
-    # employed full time, full in-person
 
     with open("../survey.csv", 'r') as f:
         csvreader = csv.DictReader(f)
@@ -66,8 +66,7 @@ def calc_avg_salary_by_country():
             if comp_freq != "NA" and comp_total != "NA":
                 try:
                     comp_total = c.convert(float(comp_total), currency, 'USD')
-                except Exception as e:
-                    print(e)
+                except:
                     continue
 
                 if comp_freq == "Yearly":
@@ -92,6 +91,80 @@ def calc_avg_salary_by_country():
                 k = equivalent_countries[k]
             f.write(f'{k},{countries[k]},{int(v[0]/v[1])}\n')
 
+def avg_salary_by_country_by_job():
+    '''Only takes into account full-time employees working full in-person'''
+    c = CurrencyConverter()
+    template_jobs_dict = {'Developer embedded applications or devices': [], 'Cloud infrastructure engineer': [], 'Developer front-end': [], 'Project manager': [], 'Product manager': [], 'Engineering manager': [], 'System administrator': [], 'Scientist': [], 'Blockchain': [], 'Data or business analyst': [], 'Engineer data': [], 'Marketing or sales professional': [], 'Student': [], 'Developer full-stack': [], 'Data scientist or machine learning specialist': [], 'Other (please specify):': [], 'Security professional': [], 'Engineer site reliability': [], 'Developer game or graphics': [], 'Designer': [], 'Developer mobile': [], 'DevOps specialist': [], 'Developer desktop or enterprise applications': [], 'NA': [], 'Database administrator': [], 'Academic researcher': [], 'Developer QA or test': [], 'Developer back-end': [], 'Educator': [], 'Senior Executive (C-Suite VP etc.)': []}
+    d = {} # {"Country":  {"Job1": [SumOfCompTotal, NoOfRespondents], ...}}
 
-split_data_by_country()
-#calc_avg_salary_by_country()
+    with open("../survey.csv", 'r') as f:
+        csvreader = csv.DictReader(f)
+
+        for row in csvreader:
+            country = row["Country"]
+            comp_total = row["CompTotal"]
+            comp_freq = row["CompFreq"]
+            remote_work = row["RemoteWork"]
+            employment = row["Employment"]
+            currency = row["Currency"].split()[0]
+            jobs = row["DevType"].replace(",","").split(";")
+
+            if remote_work != "Full in-person" or employment != "Employed, full-time":
+                continue
+
+            if comp_freq == "NA" or comp_total == "NA":
+                continue
+
+            try:
+                comp_total = c.convert(float(comp_total), currency, 'USD')
+            except:
+                continue
+
+            if comp_freq == "Yearly":
+                annual_salary = comp_total
+            if comp_freq == "Monthly":
+                annual_salary = comp_total*12
+            elif comp_freq == "Weekly":
+                annual_salary = comp_total*52
+            
+            for job in jobs:
+                if country in d and job in d[country]:
+                    d[country][job].append(annual_salary)
+                else:
+                    d[country] = copy.deepcopy(template_jobs_dict)
+                    d[country][job] = [annual_salary]
+            
+
+
+    with open("../avg_salary_by_country_by_job.csv", 'w') as f:
+        csv_header = 'Country,' + ''.join(str(e+",") for e in template_jobs_dict)[:-1]
+        f.write(f"{csv_header}\n")
+
+        for k,v in d.items():
+            if k in equivalent_countries:
+                k = equivalent_countries[k]
+
+            f.write(k)
+
+            for _,lst in v.items():
+                avg = 0
+                try:
+                    avg = int(sum(lst)/len(lst))
+                except:
+                    pass
+
+                f.write(f',{avg}')
+            f.write("\n")
+
+# ---------------------------------------------------------------------------- #
+#                                     Main                                     #
+# ---------------------------------------------------------------------------- #
+
+def main():
+    #split_data_by_country()
+    calc_avg_salary_by_country()
+    #avg_salary_by_country_by_job()
+
+
+if __name__ == '__main__':
+    main()
