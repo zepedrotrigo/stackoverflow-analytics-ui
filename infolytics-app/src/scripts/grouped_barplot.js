@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-let margin = { top: 10, right: 30, bottom: 30, left: 50 },
+let margin = { top: 10, right: 30, bottom: 100, left: 50 },
 	w = 460 - margin.left - margin.right,
 	h = 400 - margin.top - margin.bottom;
 
@@ -14,8 +14,8 @@ let svg2 = d3.select("#grouped_barplot")
 
 // Parse the Data
 d3.csv("../dataset/avg_salary_by_country_by_job.csv", function (data) {
-	selected_job_indexes = [3,5,6]
-	selected_country_indexes = [0,59,60]
+	selected_job_indexes = [3,5,6,7]
+	selected_country_indexes = [0,51,56,57,58,59,60]
 
     let new_data = [];
     new_data.columns = [];
@@ -51,8 +51,9 @@ d3.csv("../dataset/avg_salary_by_country_by_job.csv", function (data) {
 	svg2.append("g")
 		.attr("class", "axisWhite")
 		.attr("transform", "translate(0," + h + ")")
-		.call(d3.axisBottom(x).tickSize(0));
-
+		.call(d3.axisBottom(x).tickSize(0))
+		.selectAll("text")
+		.attr("transform", "translate(0,15)rotate(-10)");
 	// Add Y axis
 	let y = d3.scaleLinear()
 		.domain([0, 300000])
@@ -70,7 +71,7 @@ d3.csv("../dataset/avg_salary_by_country_by_job.csv", function (data) {
 	// color palette = one color per subgroup
 	let color = d3.scaleOrdinal()
 		.domain(countries)
-		.range(d3.schemeBlues[3]);
+		.range(["#7ac1d5", "#c6dca0", "#f0cca9", "#f0d1e2", "#ff9aa2", "#ffffff"]);
 
 	// Show the bars
 	svg2.append("g")
