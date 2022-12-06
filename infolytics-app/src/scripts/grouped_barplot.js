@@ -18,7 +18,8 @@ d3.csv("../dataset/avg_salary_by_country_by_job.csv", function (data) {
 	selected_country_indexes = [0,51,56,57,58,59,60]
 
     let new_data = [];
-    new_data.columns = [];
+	new_data.columns = [];
+	let max_y = 0;
     for (const country_idx of selected_country_indexes)
         new_data.columns.push(data.columns[country_idx])
     
@@ -28,7 +29,10 @@ d3.csv("../dataset/avg_salary_by_country_by_job.csv", function (data) {
         for (const country_idx of selected_country_indexes) {
             let keyName = data.columns[country_idx]
             let value = data[job_idx][keyName]
-            myMap[keyName] = value;
+			myMap[keyName] = value
+			console.log(value);
+			if (!isNaN(value) && parseInt(value) > max_y)
+				max_y = value
         }
         new_data.push(myMap);
     }
@@ -56,7 +60,7 @@ d3.csv("../dataset/avg_salary_by_country_by_job.csv", function (data) {
 		.attr("transform", "translate(0,15)rotate(-10)");
 	// Add Y axis
 	let y = d3.scaleLinear()
-		.domain([0, 300000])
+		.domain([0, max_y*1.15])
 		.range([h, 0]);
 	svg2.append("g")
 		.attr("class", "axisWhite")
