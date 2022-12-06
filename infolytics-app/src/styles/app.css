@@ -23,3 +23,15 @@ body {
 .h-27 {
     height: 27rem;
 }
+
+axisWhite line{
+    stroke: #f9f9f9;
+}
+  
+.axisWhite path{
+    stroke: #f9f9f9;
+}
+
+.axisWhite text{
+    fill: #f9f9f9;
+}
