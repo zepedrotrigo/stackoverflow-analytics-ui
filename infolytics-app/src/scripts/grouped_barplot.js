@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-let margin = { top: 10, right: 30, bottom: 20, left: 50 },
+let margin = { top: 10, right: 30, bottom: 30, left: 50 },
 	w = 460 - margin.left - margin.right,
 	h = 400 - margin.top - margin.bottom;
 
@@ -14,10 +14,8 @@ let svg2 = d3.select("#grouped_barplot")
 
 // Parse the Data
 d3.csv("../dataset/avg_salary_by_country_by_job.csv", function (data) {
-	console.log(data)
-
-	selected_job_indexes = [3,12]
-	selected_country_indexes = [0,59,60,61]
+	selected_job_indexes = [3,5,6]
+	selected_country_indexes = [0,59,60]
 
     let new_data = [];
     new_data.columns = [];
@@ -36,9 +34,6 @@ d3.csv("../dataset/avg_salary_by_country_by_job.csv", function (data) {
     }
 
     data = new_data;
-    console.log(data);
-
-
 
 	// List of countries = header of the csv files = soil condition here
 	let countries = data.columns.slice(1)
