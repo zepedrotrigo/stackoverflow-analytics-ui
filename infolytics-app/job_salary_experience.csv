@@ -1,0 +1,1457 @@
+job,avgsalary,experience,jobX
+Data scientist or machine learning specialist,37879,0.5,1
+Data scientist or machine learning specialist,55631,1,1
+Data scientist or machine learning specialist,62523,2,1
+Data scientist or machine learning specialist,121400,3,1
+Data scientist or machine learning specialist,67409,4,1
+Data scientist or machine learning specialist,63606,5,1
+Data scientist or machine learning specialist,79865,6,1
+Data scientist or machine learning specialist,77722,7,1
+Data scientist or machine learning specialist,79603,8,1
+Data scientist or machine learning specialist,84006,9,1
+Data scientist or machine learning specialist,100147,10,1
+Data scientist or machine learning specialist,110372,11,1
+Data scientist or machine learning specialist,97282,12,1
+Data scientist or machine learning specialist,138709,13,1
+Data scientist or machine learning specialist,112672,14,1
+Data scientist or machine learning specialist,97268,15,1
+Data scientist or machine learning specialist,104963,16,1
+Data scientist or machine learning specialist,95830,17,1
+Data scientist or machine learning specialist,102092,18,1
+Data scientist or machine learning specialist,125201,19,1
+Data scientist or machine learning specialist,131253,20,1
+Data scientist or machine learning specialist,145964,21,1
+Data scientist or machine learning specialist,144609,22,1
+Data scientist or machine learning specialist,120201,23,1
+Data scientist or machine learning specialist,168195,24,1
+Data scientist or machine learning specialist,119879,25,1
+Data scientist or machine learning specialist,158136,26,1
+Data scientist or machine learning specialist,111326,27,1
+Data scientist or machine learning specialist,130454,28,1
+Data scientist or machine learning specialist,153412,29,1
+Data scientist or machine learning specialist,134176,30,1
+Data scientist or machine learning specialist,120480,31,1
+Data scientist or machine learning specialist,121951,32,1
+Data scientist or machine learning specialist,149987,33,1
+Data scientist or machine learning specialist,137092,34,1
+Data scientist or machine learning specialist,135569,35,1
+Data scientist or machine learning specialist,109614,36,1
+Data scientist or machine learning specialist,130969,37,1
+Data scientist or machine learning specialist,167224,38,1
+Data scientist or machine learning specialist,97865,39,1
+Data scientist or machine learning specialist,154336,40,1
+Data scientist or machine learning specialist,183027,41,1
+Data scientist or machine learning specialist,239700,42,1
+Data scientist or machine learning specialist,110450,43,1
+Data scientist or machine learning specialist,103019,44,1
+Data scientist or machine learning specialist,136294,45,1
+Data scientist or machine learning specialist,0,46,1
+Data scientist or machine learning specialist,200000,47,1
+Data scientist or machine learning specialist,200000,48,1
+Data scientist or machine learning specialist,0,49,1
+Data scientist or machine learning specialist,153333,50,1
+Data scientist or machine learning specialist,211063,60,1
+Developer  front-end,24858,0.5,2
+Developer  front-end,46149,1,2
+Developer  front-end,38321,2,2
+Developer  front-end,53792,3,2
+Developer  front-end,45162,4,2
+Developer  front-end,54234,5,2
+Developer  front-end,70949,6,2
+Developer  front-end,73198,7,2
+Developer  front-end,74337,8,2
+Developer  front-end,74967,9,2
+Developer  front-end,83409,10,2
+Developer  front-end,85646,11,2
+Developer  front-end,87942,12,2
+Developer  front-end,96601,13,2
+Developer  front-end,94657,14,2
+Developer  front-end,95074,15,2
+Developer  front-end,81196,16,2
+Developer  front-end,97628,17,2
+Developer  front-end,107787,18,2
+Developer  front-end,101130,19,2
+Developer  front-end,110293,20,2
+Developer  front-end,97840,21,2
+Developer  front-end,94806,22,2
+Developer  front-end,113876,23,2
+Developer  front-end,116900,24,2
+Developer  front-end,106848,25,2
+Developer  front-end,117174,26,2
+Developer  front-end,100787,27,2
+Developer  front-end,137774,28,2
+Developer  front-end,107787,29,2
+Developer  front-end,111413,30,2
+Developer  front-end,132571,31,2
+Developer  front-end,101509,32,2
+Developer  front-end,130802,33,2
+Developer  front-end,130629,34,2
+Developer  front-end,103098,35,2
+Developer  front-end,158843,36,2
+Developer  front-end,148068,37,2
+Developer  front-end,141441,38,2
+Developer  front-end,134480,39,2
+Developer  front-end,124645,40,2
+Developer  front-end,141588,41,2
+Developer  front-end,124924,42,2
+Developer  front-end,118641,43,2
+Developer  front-end,140085,44,2
+Developer  front-end,113205,45,2
+Developer  front-end,150496,46,2
+Developer  front-end,82406,47,2
+Developer  front-end,179443,48,2
+Developer  front-end,60836,49,2
+Developer  front-end,42657,50,2
+Developer  front-end,126305,60,2
+Engineer  data,49040,1,3
+Engineer  data,109983,10,3
+Engineer  data,116668,11,3
+Engineer  data,96384,12,3
+Engineer  data,142151,13,3
+Engineer  data,116903,14,3
+Engineer  data,115969,15,3
+Engineer  data,138001,16,3
+Engineer  data,96003,17,3
+Engineer  data,123326,18,3
+Engineer  data,96110,19,3
+Engineer  data,79223,2,3
+Engineer  data,125113,20,3
+Engineer  data,129852,21,3
+Engineer  data,109614,22,3
+Engineer  data,117193,23,3
+Engineer  data,149061,24,3
+Engineer  data,109454,25,3
+Engineer  data,177737,26,3
+Engineer  data,91942,27,3
+Engineer  data,128284,28,3
+Engineer  data,124302,29,3
+Engineer  data,66889,3,3
+Engineer  data,165526,30,3
+Engineer  data,129550,31,3
+Engineer  data,165700,32,3
+Engineer  data,138999,33,3
+Engineer  data,134775,34,3
+Engineer  data,138684,35,3
+Engineer  data,143904,36,3
+Engineer  data,222567,37,3
+Engineer  data,105630,38,3
+Engineer  data,126651,39,3
+Engineer  data,53228,4,3
+Engineer  data,139136,40,3
+Engineer  data,160793,41,3
+Engineer  data,165465,42,3
+Engineer  data,132115,43,3
+Engineer  data,114375,44,3
+Engineer  data,174474,45,3
+Engineer  data,0,46,3
+Engineer  data,104000,47,3
+Engineer  data,151852,48,3
+Engineer  data,87505,49,3
+Engineer  data,74691,5,3
+Engineer  data,262500,50,3
+Engineer  data,111747,6,3
+Engineer  data,97299,7,3
+Engineer  data,96991,8,3
+Engineer  data,94912,9,3
+Engineer  data,123015,0.5,3
+Engineer  data,129972,60,3
+Engineer  site reliability,72792,1,4
+Engineer  site reliability,109918,10,4
+Engineer  site reliability,108086,11,4
+Engineer  site reliability,107802,12,4
+Engineer  site reliability,102838,13,4
+Engineer  site reliability,93130,14,4
+Engineer  site reliability,130631,15,4
+Engineer  site reliability,105521,16,4
+Engineer  site reliability,149879,17,4
+Engineer  site reliability,120014,18,4
+Engineer  site reliability,111852,19,4
+Engineer  site reliability,58505,2,4
+Engineer  site reliability,140001,20,4
+Engineer  site reliability,111959,21,4
+Engineer  site reliability,112379,22,4
+Engineer  site reliability,116005,23,4
+Engineer  site reliability,218451,24,4
+Engineer  site reliability,170459,25,4
+Engineer  site reliability,115547,26,4
+Engineer  site reliability,99429,27,4
+Engineer  site reliability,103209,28,4
+Engineer  site reliability,192532,29,4
+Engineer  site reliability,43118,3,4
+Engineer  site reliability,179619,30,4
+Engineer  site reliability,128753,31,4
+Engineer  site reliability,99499,32,4
+Engineer  site reliability,124659,33,4
+Engineer  site reliability,161364,34,4
+Engineer  site reliability,174735,35,4
+Engineer  site reliability,114769,36,4
+Engineer  site reliability,174832,37,4
+Engineer  site reliability,148299,38,4
+Engineer  site reliability,141322,39,4
+Engineer  site reliability,66866,4,4
+Engineer  site reliability,131694,40,4
+Engineer  site reliability,162298,41,4
+Engineer  site reliability,165163,42,4
+Engineer  site reliability,145918,43,4
+Engineer  site reliability,0,44,4
+Engineer  site reliability,156240,45,4
+Engineer  site reliability,300000,46,4
+Engineer  site reliability,0,47,4
+Engineer  site reliability,0,48,4
+Engineer  site reliability,0,49,4
+Engineer  site reliability,65990,5,4
+Engineer  site reliability,0,50,4
+Engineer  site reliability,111812,6,4
+Engineer  site reliability,79122,7,4
+Engineer  site reliability,92247,8,4
+Engineer  site reliability,94178,9,4
+Engineer  site reliability,15528,0.5,4
+Engineer  site reliability,0,60,4
+Developer  full-stack,45506,1,5
+Developer  full-stack,83925,10,5
+Developer  full-stack,97064,11,5
+Developer  full-stack,89325,12,5
+Developer  full-stack,94923,13,5
+Developer  full-stack,99326,14,5
+Developer  full-stack,99507,15,5
+Developer  full-stack,99290,16,5
+Developer  full-stack,107780,17,5
+Developer  full-stack,104615,18,5
+Developer  full-stack,116521,19,5
+Developer  full-stack,58465,2,5
+Developer  full-stack,111288,20,5
+Developer  full-stack,111602,21,5
+Developer  full-stack,111828,22,5
+Developer  full-stack,117106,23,5
+Developer  full-stack,119308,24,5
+Developer  full-stack,122589,25,5
+Developer  full-stack,122907,26,5
+Developer  full-stack,106925,27,5
+Developer  full-stack,149916,28,5
+Developer  full-stack,113815,29,5
+Developer  full-stack,61101,3,5
+Developer  full-stack,119131,30,5
+Developer  full-stack,147005,31,5
+Developer  full-stack,106314,32,5
+Developer  full-stack,137352,33,5
+Developer  full-stack,137319,34,5
+Developer  full-stack,131076,35,5
+Developer  full-stack,149854,36,5
+Developer  full-stack,134166,37,5
+Developer  full-stack,133650,38,5
+Developer  full-stack,133930,39,5
+Developer  full-stack,53335,4,5
+Developer  full-stack,136737,40,5
+Developer  full-stack,140107,41,5
+Developer  full-stack,153679,42,5
+Developer  full-stack,133229,43,5
+Developer  full-stack,136949,44,5
+Developer  full-stack,168014,45,5
+Developer  full-stack,122365,46,5
+Developer  full-stack,107184,47,5
+Developer  full-stack,169051,48,5
+Developer  full-stack,97461,49,5
+Developer  full-stack,50886,5,5
+Developer  full-stack,121400,50,5
+Developer  full-stack,71928,6,5
+Developer  full-stack,72223,7,5
+Developer  full-stack,77945,8,5
+Developer  full-stack,80223,9,5
+Developer  full-stack,26721,0.5,5
+Developer  full-stack,149267,60,5
+Developer  back-end,0,1,6
+Developer  back-end,0,10,6
+Developer  back-end,0,11,6
+Developer  back-end,0,12,6
+Developer  back-end,0,13,6
+Developer  back-end,0,14,6
+Developer  back-end,0,15,6
+Developer  back-end,0,16,6
+Developer  back-end,0,17,6
+Developer  back-end,0,18,6
+Developer  back-end,0,19,6
+Developer  back-end,0,2,6
+Developer  back-end,0,20,6
+Developer  back-end,0,21,6
+Developer  back-end,0,22,6
+Developer  back-end,0,23,6
+Developer  back-end,0,24,6
+Developer  back-end,0,25,6
+Developer  back-end,0,26,6
+Developer  back-end,0,27,6
+Developer  back-end,0,28,6
+Developer  back-end,0,29,6
+Developer  back-end,0,3,6
+Developer  back-end,0,30,6
+Developer  back-end,0,31,6
+Developer  back-end,0,32,6
+Developer  back-end,0,33,6
+Developer  back-end,0,34,6
+Developer  back-end,0,35,6
+Developer  back-end,0,36,6
+Developer  back-end,0,37,6
+Developer  back-end,0,38,6
+Developer  back-end,0,39,6
+Developer  back-end,0,4,6
+Developer  back-end,0,40,6
+Developer  back-end,0,41,6
+Developer  back-end,0,42,6
+Developer  back-end,0,43,6
+Developer  back-end,0,44,6
+Developer  back-end,0,45,6
+Developer  back-end,0,46,6
+Developer  back-end,0,47,6
+Developer  back-end,0,48,6
+Developer  back-end,0,49,6
+Developer  back-end,0,5,6
+Developer  back-end,0,50,6
+Developer  back-end,0,6,6
+Developer  back-end,0,7,6
+Developer  back-end,0,8,6
+Developer  back-end,0,9,6
+Developer  back-end,0,0.5,6
+Developer  back-end,0,60,6
+Developer  desktop or enterprise applications,52263,1,7
+Developer  desktop or enterprise applications,79675,10,7
+Developer  desktop or enterprise applications,90404,11,7
+Developer  desktop or enterprise applications,77229,12,7
+Developer  desktop or enterprise applications,80469,13,7
+Developer  desktop or enterprise applications,103499,14,7
+Developer  desktop or enterprise applications,98258,15,7
+Developer  desktop or enterprise applications,84618,16,7
+Developer  desktop or enterprise applications,98318,17,7
+Developer  desktop or enterprise applications,106830,18,7
+Developer  desktop or enterprise applications,107682,19,7
+Developer  desktop or enterprise applications,41960,2,7
+Developer  desktop or enterprise applications,111551,20,7
+Developer  desktop or enterprise applications,132226,21,7
+Developer  desktop or enterprise applications,98051,22,7
+Developer  desktop or enterprise applications,106681,23,7
+Developer  desktop or enterprise applications,105254,24,7
+Developer  desktop or enterprise applications,102340,25,7
+Developer  desktop or enterprise applications,115619,26,7
+Developer  desktop or enterprise applications,103757,27,7
+Developer  desktop or enterprise applications,115574,28,7
+Developer  desktop or enterprise applications,103056,29,7
+Developer  desktop or enterprise applications,61086,3,7
+Developer  desktop or enterprise applications,116741,30,7
+Developer  desktop or enterprise applications,133775,31,7
+Developer  desktop or enterprise applications,99395,32,7
+Developer  desktop or enterprise applications,95962,33,7
+Developer  desktop or enterprise applications,105252,34,7
+Developer  desktop or enterprise applications,125470,35,7
+Developer  desktop or enterprise applications,133372,36,7
+Developer  desktop or enterprise applications,126587,37,7
+Developer  desktop or enterprise applications,143899,38,7
+Developer  desktop or enterprise applications,137737,39,7
+Developer  desktop or enterprise applications,60301,4,7
+Developer  desktop or enterprise applications,128919,40,7
+Developer  desktop or enterprise applications,122617,41,7
+Developer  desktop or enterprise applications,134161,42,7
+Developer  desktop or enterprise applications,122438,43,7
+Developer  desktop or enterprise applications,123636,44,7
+Developer  desktop or enterprise applications,125420,45,7
+Developer  desktop or enterprise applications,118674,46,7
+Developer  desktop or enterprise applications,88092,47,7
+Developer  desktop or enterprise applications,132584,48,7
+Developer  desktop or enterprise applications,176211,49,7
+Developer  desktop or enterprise applications,43951,5,7
+Developer  desktop or enterprise applications,85901,50,7
+Developer  desktop or enterprise applications,70483,6,7
+Developer  desktop or enterprise applications,64133,7,7
+Developer  desktop or enterprise applications,68076,8,7
+Developer  desktop or enterprise applications,79568,9,7
+Developer  desktop or enterprise applications,68279,0.5,7
+Developer  desktop or enterprise applications,125034,60,7
+Developer  QA or test,35266,1,8
+Developer  QA or test,91721,10,8
+Developer  QA or test,102858,11,8
+Developer  QA or test,86771,12,8
+Developer  QA or test,117369,13,8
+Developer  QA or test,82895,14,8
+Developer  QA or test,109633,15,8
+Developer  QA or test,78668,16,8
+Developer  QA or test,126189,17,8
+Developer  QA or test,86508,18,8
+Developer  QA or test,85891,19,8
+Developer  QA or test,58460,2,8
+Developer  QA or test,97322,20,8
+Developer  QA or test,125157,21,8
+Developer  QA or test,106004,22,8
+Developer  QA or test,110999,23,8
+Developer  QA or test,115299,24,8
+Developer  QA or test,116152,25,8
+Developer  QA or test,148808,26,8
+Developer  QA or test,108706,27,8
+Developer  QA or test,143864,28,8
+Developer  QA or test,236068,29,8
+Developer  QA or test,99793,3,8
+Developer  QA or test,94370,30,8
+Developer  QA or test,79094,31,8
+Developer  QA or test,132071,32,8
+Developer  QA or test,100625,33,8
+Developer  QA or test,110612,34,8
+Developer  QA or test,75220,35,8
+Developer  QA or test,86652,36,8
+Developer  QA or test,74884,37,8
+Developer  QA or test,91097,38,8
+Developer  QA or test,94665,39,8
+Developer  QA or test,82585,4,8
+Developer  QA or test,166438,40,8
+Developer  QA or test,152908,41,8
+Developer  QA or test,126443,42,8
+Developer  QA or test,121215,43,8
+Developer  QA or test,140477,44,8
+Developer  QA or test,160000,45,8
+Developer  QA or test,160000,46,8
+Developer  QA or test,117000,47,8
+Developer  QA or test,122172,48,8
+Developer  QA or test,0,49,8
+Developer  QA or test,50537,5,8
+Developer  QA or test,362500,50,8
+Developer  QA or test,60561,6,8
+Developer  QA or test,65912,7,8
+Developer  QA or test,81030,8,8
+Developer  QA or test,72597,9,8
+Developer  QA or test,46943,0.5,8
+Developer  QA or test,108484,60,8
+Student,33505,1,9
+Student,80902,10,9
+Student,44479,11,9
+Student,46800,12,9
+Student,65559,13,9
+Student,40961,14,9
+Student,56256,15,9
+Student,102853,16,9
+Student,143508,17,9
+Student,92550,18,9
+Student,36072,19,9
+Student,36849,2,9
+Student,54116,20,9
+Student,0,21,9
+Student,1090,22,9
+Student,54103,23,9
+Student,72695,24,9
+Student,178095,25,9
+Student,93701,26,9
+Student,30000,27,9
+Student,0,28,9
+Student,125000,29,9
+Student,33838,3,9
+Student,0,30,9
+Student,0,31,9
+Student,3120,32,9
+Student,0,33,9
+Student,178000,34,9
+Student,0,35,9
+Student,0,36,9
+Student,0,37,9
+Student,0,38,9
+Student,383916,39,9
+Student,40931,4,9
+Student,109590,40,9
+Student,0,41,9
+Student,0,42,9
+Student,0,43,9
+Student,0,44,9
+Student,9036,45,9
+Student,0,46,9
+Student,0,47,9
+Student,0,48,9
+Student,0,49,9
+Student,39049,5,9
+Student,0,50,9
+Student,38116,6,9
+Student,38743,7,9
+Student,31334,8,9
+Student,66752,9,9
+Student,13374,0.5,9
+Student,0,60,9
+Developer  mobileEducator,0,1,10
+Developer  mobileEducator,0,10,10
+Developer  mobileEducator,0,11,10
+Developer  mobileEducator,0,12,10
+Developer  mobileEducator,0,13,10
+Developer  mobileEducator,0,14,10
+Developer  mobileEducator,0,15,10
+Developer  mobileEducator,0,16,10
+Developer  mobileEducator,0,17,10
+Developer  mobileEducator,0,18,10
+Developer  mobileEducator,0,19,10
+Developer  mobileEducator,0,2,10
+Developer  mobileEducator,0,20,10
+Developer  mobileEducator,0,21,10
+Developer  mobileEducator,0,22,10
+Developer  mobileEducator,0,23,10
+Developer  mobileEducator,0,24,10
+Developer  mobileEducator,0,25,10
+Developer  mobileEducator,0,26,10
+Developer  mobileEducator,0,27,10
+Developer  mobileEducator,0,28,10
+Developer  mobileEducator,0,29,10
+Developer  mobileEducator,0,3,10
+Developer  mobileEducator,0,30,10
+Developer  mobileEducator,0,31,10
+Developer  mobileEducator,0,32,10
+Developer  mobileEducator,0,33,10
+Developer  mobileEducator,0,34,10
+Developer  mobileEducator,0,35,10
+Developer  mobileEducator,0,36,10
+Developer  mobileEducator,0,37,10
+Developer  mobileEducator,0,38,10
+Developer  mobileEducator,0,39,10
+Developer  mobileEducator,0,4,10
+Developer  mobileEducator,0,40,10
+Developer  mobileEducator,0,41,10
+Developer  mobileEducator,0,42,10
+Developer  mobileEducator,0,43,10
+Developer  mobileEducator,0,44,10
+Developer  mobileEducator,0,45,10
+Developer  mobileEducator,0,46,10
+Developer  mobileEducator,0,47,10
+Developer  mobileEducator,0,48,10
+Developer  mobileEducator,0,49,10
+Developer  mobileEducator,0,5,10
+Developer  mobileEducator,0,50,10
+Developer  mobileEducator,0,6,10
+Developer  mobileEducator,0,7,10
+Developer  mobileEducator,0,8,10
+Developer  mobileEducator,0,9,10
+Developer  mobileEducator,0,0.5,10
+Developer  mobileEducator,0,60,10
+Engineering manager,66840,1,11
+Engineering manager,124435,10,11
+Engineering manager,128884,11,11
+Engineering manager,123660,12,11
+Engineering manager,115093,13,11
+Engineering manager,113041,14,11
+Engineering manager,128330,15,11
+Engineering manager,122953,16,11
+Engineering manager,126519,17,11
+Engineering manager,136106,18,11
+Engineering manager,143454,19,11
+Engineering manager,93746,2,11
+Engineering manager,129802,20,11
+Engineering manager,135672,21,11
+Engineering manager,151989,22,11
+Engineering manager,140968,23,11
+Engineering manager,143669,24,11
+Engineering manager,143141,25,11
+Engineering manager,182902,26,11
+Engineering manager,141744,27,11
+Engineering manager,193820,28,11
+Engineering manager,113532,29,11
+Engineering manager,139872,3,11
+Engineering manager,158116,30,11
+Engineering manager,199046,31,11
+Engineering manager,121094,32,11
+Engineering manager,186733,33,11
+Engineering manager,140852,34,11
+Engineering manager,142634,35,11
+Engineering manager,136549,36,11
+Engineering manager,186910,37,11
+Engineering manager,207129,38,11
+Engineering manager,145539,39,11
+Engineering manager,63263,4,11
+Engineering manager,149475,40,11
+Engineering manager,163117,41,11
+Engineering manager,152415,42,11
+Engineering manager,119971,43,11
+Engineering manager,192000,44,11
+Engineering manager,370317,45,11
+Engineering manager,200000,46,11
+Engineering manager,63984,47,11
+Engineering manager,265400,48,11
+Engineering manager,298750,49,11
+Engineering manager,67275,5,11
+Engineering manager,0,50,11
+Engineering manager,96339,6,11
+Engineering manager,125759,7,11
+Engineering manager,133898,8,11
+Engineering manager,96718,9,11
+Engineering manager,21768,0.5,11
+Engineering manager,154923,60,11
+Database administrator,47698,1,11
+Database administrator,71520,10,11
+Database administrator,92682,11,11
+Database administrator,67920,12,11
+Database administrator,78662,13,11
+Database administrator,85420,14,11
+Database administrator,86631,15,11
+Database administrator,96352,16,11
+Database administrator,93965,17,11
+Database administrator,93863,18,11
+Database administrator,91818,19,11
+Database administrator,35303,2,11
+Database administrator,97966,20,11
+Database administrator,111401,21,11
+Database administrator,92209,22,11
+Database administrator,92569,23,11
+Database administrator,124931,24,11
+Database administrator,104216,25,11
+Database administrator,116058,26,11
+Database administrator,110257,27,11
+Database administrator,100924,28,11
+Database administrator,134449,29,11
+Database administrator,41992,3,11
+Database administrator,125873,30,11
+Database administrator,125407,31,11
+Database administrator,113546,32,11
+Database administrator,130640,33,11
+Database administrator,92829,34,11
+Database administrator,126211,35,11
+Database administrator,119500,36,11
+Database administrator,126242,37,11
+Database administrator,127606,38,11
+Database administrator,138016,39,11
+Database administrator,48702,4,11
+Database administrator,112847,40,11
+Database administrator,124870,41,11
+Database administrator,125944,42,11
+Database administrator,105434,43,11
+Database administrator,121555,44,11
+Database administrator,110018,45,11
+Database administrator,91076,46,11
+Database administrator,118500,47,11
+Database administrator,145078,48,11
+Database administrator,85627,49,11
+Database administrator,53301,5,11
+Database administrator,252008,50,11
+Database administrator,60196,6,11
+Database administrator,59768,7,11
+Database administrator,69475,8,11
+Database administrator,62732,9,11
+Database administrator,16284,0.5,11
+Database administrator,168912,60,11
+Academic researcher,127392,1,12
+Academic researcher,59355,10,12
+Academic researcher,92353,11,12
+Academic researcher,75726,12,12
+Academic researcher,80966,13,12
+Academic researcher,142755,14,12
+Academic researcher,90280,15,12
+Academic researcher,62767,16,12
+Academic researcher,82716,17,12
+Academic researcher,56583,18,12
+Academic researcher,105298,19,12
+Academic researcher,85839,2,12
+Academic researcher,86435,20,12
+Academic researcher,79839,21,12
+Academic researcher,69434,22,12
+Academic researcher,123056,23,12
+Academic researcher,104156,24,12
+Academic researcher,104242,25,12
+Academic researcher,206120,26,12
+Academic researcher,112076,27,12
+Academic researcher,91994,28,12
+Academic researcher,145000,29,12
+Academic researcher,42253,3,12
+Academic researcher,92027,30,12
+Academic researcher,72983,31,12
+Academic researcher,126573,32,12
+Academic researcher,93512,33,12
+Academic researcher,84807,34,12
+Academic researcher,91069,35,12
+Academic researcher,111596,36,12
+Academic researcher,171556,37,12
+Academic researcher,133039,38,12
+Academic researcher,106136,39,12
+Academic researcher,62626,4,12
+Academic researcher,132192,40,12
+Academic researcher,40368,41,12
+Academic researcher,183814,42,12
+Academic researcher,172277,43,12
+Academic researcher,126375,44,12
+Academic researcher,216424,45,12
+Academic researcher,160000,46,12
+Academic researcher,0,47,12
+Academic researcher,265400,48,12
+Academic researcher,84696,49,12
+Academic researcher,40403,5,12
+Academic researcher,143370,50,12
+Academic researcher,56126,6,12
+Academic researcher,55896,7,12
+Academic researcher,61373,8,12
+Academic researcher,56933,9,12
+Academic researcher,21950,0.5,12
+Academic researcher,121568,60,13
+DevOps specialist,32142,1,13
+DevOps specialist,87293,10,13
+DevOps specialist,109225,11,13
+DevOps specialist,97804,12,13
+DevOps specialist,102580,13,13
+DevOps specialist,86219,14,13
+DevOps specialist,100927,15,13
+DevOps specialist,120258,16,13
+DevOps specialist,127237,17,13
+DevOps specialist,112774,18,13
+DevOps specialist,111564,19,13
+DevOps specialist,44567,2,13
+DevOps specialist,113316,20,13
+DevOps specialist,105547,21,13
+DevOps specialist,124375,22,13
+DevOps specialist,118619,23,13
+DevOps specialist,116364,24,13
+DevOps specialist,116550,25,13
+DevOps specialist,141680,26,13
+DevOps specialist,111466,27,13
+DevOps specialist,151016,28,13
+DevOps specialist,145587,29,13
+DevOps specialist,58857,3,13
+DevOps specialist,121945,30,13
+DevOps specialist,111273,31,13
+DevOps specialist,111644,32,13
+DevOps specialist,122710,33,13
+DevOps specialist,167939,34,13
+DevOps specialist,111621,35,13
+DevOps specialist,117074,36,13
+DevOps specialist,135973,37,13
+DevOps specialist,132122,38,13
+DevOps specialist,156649,39,13
+DevOps specialist,72321,4,13
+DevOps specialist,124472,40,13
+DevOps specialist,92956,41,13
+DevOps specialist,145252,42,13
+DevOps specialist,139723,43,13
+DevOps specialist,137204,44,13
+DevOps specialist,210955,45,13
+DevOps specialist,220000,46,13
+DevOps specialist,108500,47,13
+DevOps specialist,137875,48,13
+DevOps specialist,0,49,13
+DevOps specialist,71545,5,13
+DevOps specialist,249792,50,13
+DevOps specialist,98193,6,13
+DevOps specialist,72657,7,13
+DevOps specialist,83440,8,13
+DevOps specialist,82249,9,13
+DevOps specialist,24776,0.5,13
+DevOps specialist,147486,60,13
+Other,56491,1,14
+Other,97422,10,14
+Other,108907,11,14
+Other,106002,12,14
+Other,84512,13,14
+Other,110900,14,14
+Other,117877,15,14
+Other,94558,16,14
+Other,140707,17,14
+Other,107107,18,14
+Other,110731,19,14
+Other,87492,2,14
+Other,132128,20,14
+Other,113575,21,14
+Other,140196,22,14
+Other,152329,23,14
+Other,143941,24,14
+Other,136240,25,14
+Other,210609,26,14
+Other,142004,27,14
+Other,182041,28,14
+Other,136221,29,14
+Other,71067,3,14
+Other,109497,30,14
+Other,64694,31,14
+Other,113172,32,14
+Other,123507,33,14
+Other,104198,34,14
+Other,105898,35,14
+Other,127384,36,14
+Other,167340,37,14
+Other,157482,38,14
+Other,124443,39,14
+Other,51196,4,14
+Other,157440,40,14
+Other,182160,41,14
+Other,196958,42,14
+Other,225693,43,14
+Other,106093,44,14
+Other,126210,45,14
+Other,175895,46,14
+Other,94230,47,14
+Other,232700,48,14
+Other,175000,49,14
+Other,84927,5,14
+Other,77250,50,14
+Other,83459,6,14
+Other,83138,7,14
+Other,81404,8,14
+Other,172110,9,14
+Other,25210,0.5,14
+Other,153344,60,14
+Developer  embedded applications or devices,39147,1,15
+Developer  embedded applications or devices,84890,10,15
+Developer  embedded applications or devices,104574,11,15
+Developer  embedded applications or devices,85323,12,15
+Developer  embedded applications or devices,94341,13,15
+Developer  embedded applications or devices,122193,14,15
+Developer  embedded applications or devices,104060,15,15
+Developer  embedded applications or devices,103756,16,15
+Developer  embedded applications or devices,81734,17,15
+Developer  embedded applications or devices,114383,18,15
+Developer  embedded applications or devices,163935,19,15
+Developer  embedded applications or devices,33434,2,15
+Developer  embedded applications or devices,108186,20,15
+Developer  embedded applications or devices,150067,21,15
+Developer  embedded applications or devices,104464,22,15
+Developer  embedded applications or devices,79367,23,15
+Developer  embedded applications or devices,137447,24,15
+Developer  embedded applications or devices,100533,25,15
+Developer  embedded applications or devices,92865,26,15
+Developer  embedded applications or devices,90233,27,15
+Developer  embedded applications or devices,108712,28,15
+Developer  embedded applications or devices,121268,29,15
+Developer  embedded applications or devices,55702,3,15
+Developer  embedded applications or devices,123356,30,15
+Developer  embedded applications or devices,146793,31,15
+Developer  embedded applications or devices,78258,32,15
+Developer  embedded applications or devices,98880,33,15
+Developer  embedded applications or devices,119703,34,15
+Developer  embedded applications or devices,119762,35,15
+Developer  embedded applications or devices,117200,36,15
+Developer  embedded applications or devices,171761,37,15
+Developer  embedded applications or devices,127353,38,15
+Developer  embedded applications or devices,127747,39,15
+Developer  embedded applications or devices,60633,4,15
+Developer  embedded applications or devices,111599,40,15
+Developer  embedded applications or devices,114293,41,15
+Developer  embedded applications or devices,177958,42,15
+Developer  embedded applications or devices,104841,43,15
+Developer  embedded applications or devices,125100,44,15
+Developer  embedded applications or devices,107887,45,15
+Developer  embedded applications or devices,117591,46,15
+Developer  embedded applications or devices,90259,47,15
+Developer  embedded applications or devices,135454,48,15
+Developer  embedded applications or devices,113268,49,15
+Developer  embedded applications or devices,59788,5,15
+Developer  embedded applications or devices,190821,50,15
+Developer  embedded applications or devices,68408,6,15
+Developer  embedded applications or devices,70005,7,15
+Developer  embedded applications or devices,73775,8,15
+Developer  embedded applications or devices,90293,9,15
+Developer  embedded applications or devices,35128,0.5,15
+Developer  embedded applications or devices,112506,60,15
+Developer  game or graphics,127392,1,16
+Developer  game or graphics,83588,10,16
+Developer  game or graphics,86015,11,16
+Developer  game or graphics,90291,12,16
+Developer  game or graphics,71012,13,16
+Developer  game or graphics,105067,14,16
+Developer  game or graphics,133962,15,16
+Developer  game or graphics,94505,16,16
+Developer  game or graphics,107200,17,16
+Developer  game or graphics,76487,18,16
+Developer  game or graphics,69937,19,16
+Developer  game or graphics,30490,2,16
+Developer  game or graphics,102685,20,16
+Developer  game or graphics,108594,21,16
+Developer  game or graphics,125688,22,16
+Developer  game or graphics,72433,23,16
+Developer  game or graphics,85494,24,16
+Developer  game or graphics,94281,25,16
+Developer  game or graphics,117099,26,16
+Developer  game or graphics,109004,27,16
+Developer  game or graphics,78974,28,16
+Developer  game or graphics,105342,29,16
+Developer  game or graphics,20363,3,16
+Developer  game or graphics,142738,30,16
+Developer  game or graphics,120558,31,16
+Developer  game or graphics,121853,32,16
+Developer  game or graphics,229776,33,16
+Developer  game or graphics,104537,34,16
+Developer  game or graphics,124031,35,16
+Developer  game or graphics,202227,36,16
+Developer  game or graphics,275170,37,16
+Developer  game or graphics,71038,38,16
+Developer  game or graphics,185000,39,16
+Developer  game or graphics,42417,4,16
+Developer  game or graphics,145413,40,16
+Developer  game or graphics,90146,41,16
+Developer  game or graphics,196962,42,16
+Developer  game or graphics,108236,43,16
+Developer  game or graphics,136177,44,16
+Developer  game or graphics,451189,45,16
+Developer  game or graphics,0,46,16
+Developer  game or graphics,0,47,16
+Developer  game or graphics,160000,48,16
+Developer  game or graphics,0,49,16
+Developer  game or graphics,38521,5,16
+Developer  game or graphics,0,50,16
+Developer  game or graphics,52730,6,16
+Developer  game or graphics,89588,7,16
+Developer  game or graphics,58705,8,16
+Developer  game or graphics,85849,9,16
+Developer  game or graphics,14400,0.5,16
+Developer  game or graphics,197972,60,16
+Project manager,167753,1,17
+Project manager,88125,10,17
+Project manager,85398,11,17
+Project manager,70144,12,17
+Project manager,69814,13,17
+Project manager,86114,14,17
+Project manager,77666,15,17
+Project manager,91923,16,17
+Project manager,96176,17,17
+Project manager,109672,18,17
+Project manager,123697,19,17
+Project manager,87986,2,17
+Project manager,111021,20,17
+Project manager,83577,21,17
+Project manager,98887,22,17
+Project manager,98471,23,17
+Project manager,116223,24,17
+Project manager,111866,25,17
+Project manager,142465,26,17
+Project manager,108154,27,17
+Project manager,132868,28,17
+Project manager,137584,29,17
+Project manager,47613,3,17
+Project manager,113110,30,17
+Project manager,88678,31,17
+Project manager,99115,32,17
+Project manager,64949,33,17
+Project manager,138255,34,17
+Project manager,103878,35,17
+Project manager,140617,36,17
+Project manager,158027,37,17
+Project manager,78607,38,17
+Project manager,181634,39,17
+Project manager,77793,4,17
+Project manager,124815,40,17
+Project manager,157000,41,17
+Project manager,142463,42,17
+Project manager,132896,43,17
+Project manager,154934,44,17
+Project manager,186717,45,17
+Project manager,85713,46,17
+Project manager,42463,47,17
+Project manager,120184,48,17
+Project manager,100000,49,17
+Project manager,54211,5,17
+Project manager,107289,50,17
+Project manager,61087,6,17
+Project manager,62806,7,17
+Project manager,83563,8,17
+Project manager,64686,9,17
+Project manager,21204,0.5,17
+Project manager,115700,60,17
+Cloud infrastructure engineer,68684,1,18
+Cloud infrastructure engineer,110136,10,18
+Cloud infrastructure engineer,110083,11,18
+Cloud infrastructure engineer,112673,12,18
+Cloud infrastructure engineer,125055,13,18
+Cloud infrastructure engineer,98311,14,18
+Cloud infrastructure engineer,117307,15,18
+Cloud infrastructure engineer,129937,16,18
+Cloud infrastructure engineer,125790,17,18
+Cloud infrastructure engineer,113238,18,18
+Cloud infrastructure engineer,115014,19,18
+Cloud infrastructure engineer,112931,2,18
+Cloud infrastructure engineer,122798,20,18
+Cloud infrastructure engineer,119790,21,18
+Cloud infrastructure engineer,138592,22,18
+Cloud infrastructure engineer,122763,23,18
+Cloud infrastructure engineer,144171,24,18
+Cloud infrastructure engineer,123881,25,18
+Cloud infrastructure engineer,139999,26,18
+Cloud infrastructure engineer,135763,27,18
+Cloud infrastructure engineer,172872,28,18
+Cloud infrastructure engineer,112187,29,18
+Cloud infrastructure engineer,67222,3,18
+Cloud infrastructure engineer,137208,30,18
+Cloud infrastructure engineer,118250,31,18
+Cloud infrastructure engineer,130439,32,18
+Cloud infrastructure engineer,158927,33,18
+Cloud infrastructure engineer,161595,34,18
+Cloud infrastructure engineer,160743,35,18
+Cloud infrastructure engineer,120057,36,18
+Cloud infrastructure engineer,151626,37,18
+Cloud infrastructure engineer,184195,38,18
+Cloud infrastructure engineer,172197,39,18
+Cloud infrastructure engineer,62168,4,18
+Cloud infrastructure engineer,181794,40,18
+Cloud infrastructure engineer,162833,41,18
+Cloud infrastructure engineer,186989,42,18
+Cloud infrastructure engineer,157521,43,18
+Cloud infrastructure engineer,186395,44,18
+Cloud infrastructure engineer,264007,45,18
+Cloud infrastructure engineer,300000,46,18
+Cloud infrastructure engineer,0,47,18
+Cloud infrastructure engineer,225000,48,18
+Cloud infrastructure engineer,96250,49,18
+Cloud infrastructure engineer,65421,5,18
+Cloud infrastructure engineer,0,50,18
+Cloud infrastructure engineer,100065,6,18
+Cloud infrastructure engineer,91948,7,18
+Cloud infrastructure engineer,85164,8,18
+Cloud infrastructure engineer,98606,9,18
+Cloud infrastructure engineer,0,0.5,18
+Cloud infrastructure engineer,148501,60,18
+Data or business analyst,41385,1,19
+Data or business analyst,93835,10,19
+Data or business analyst,118748,11,19
+Data or business analyst,85189,12,19
+Data or business analyst,79213,13,19
+Data or business analyst,76875,14,19
+Data or business analyst,102998,15,19
+Data or business analyst,111630,16,19
+Data or business analyst,124177,17,19
+Data or business analyst,92755,18,19
+Data or business analyst,104548,19,19
+Data or business analyst,37125,2,19
+Data or business analyst,114502,20,19
+Data or business analyst,113793,21,19
+Data or business analyst,89734,22,19
+Data or business analyst,125475,23,19
+Data or business analyst,131300,24,19
+Data or business analyst,95040,25,19
+Data or business analyst,149546,26,19
+Data or business analyst,109600,27,19
+Data or business analyst,101824,28,19
+Data or business analyst,102509,29,19
+Data or business analyst,57752,3,19
+Data or business analyst,110434,30,19
+Data or business analyst,119605,31,19
+Data or business analyst,86550,32,19
+Data or business analyst,109426,33,19
+Data or business analyst,108743,34,19
+Data or business analyst,105363,35,19
+Data or business analyst,106031,36,19
+Data or business analyst,123977,37,19
+Data or business analyst,120792,38,19
+Data or business analyst,144932,39,19
+Data or business analyst,47859,4,19
+Data or business analyst,111615,40,19
+Data or business analyst,125697,41,19
+Data or business analyst,120843,42,19
+Data or business analyst,156489,43,19
+Data or business analyst,123650,44,19
+Data or business analyst,133619,45,19
+Data or business analyst,97390,46,19
+Data or business analyst,117000,47,19
+Data or business analyst,265400,48,19
+Data or business analyst,122348,49,19
+Data or business analyst,61848,5,19
+Data or business analyst,244433,50,19
+Data or business analyst,87224,6,19
+Data or business analyst,72199,7,19
+Data or business analyst,54499,8,19
+Data or business analyst,86536,9,19
+Data or business analyst,83745,0.5,19
+Data or business analyst,112816,60,19
+Designer,28007,1,20
+Designer,75094,10,20
+Designer,89043,11,20
+Designer,95053,12,20
+Designer,75895,13,20
+Designer,87763,14,20
+Designer,87831,15,20
+Designer,84491,16,20
+Designer,99087,17,20
+Designer,96240,18,20
+Designer,59455,19,20
+Designer,60370,2,20
+Designer,108714,20,20
+Designer,116975,21,20
+Designer,98727,22,20
+Designer,114688,23,20
+Designer,105869,24,20
+Designer,110460,25,20
+Designer,95319,26,20
+Designer,96235,27,20
+Designer,111424,28,20
+Designer,107630,29,20
+Designer,40728,3,20
+Designer,111938,30,20
+Designer,159856,31,20
+Designer,86093,32,20
+Designer,94636,33,20
+Designer,88553,34,20
+Designer,122455,35,20
+Designer,153538,36,20
+Designer,182888,37,20
+Designer,137599,38,20
+Designer,127962,39,20
+Designer,37218,4,20
+Designer,125552,40,20
+Designer,102764,41,20
+Designer,124709,42,20
+Designer,84609,43,20
+Designer,128444,44,20
+Designer,120287,45,20
+Designer,120909,46,20
+Designer,0,47,20
+Designer,169624,48,20
+Designer,87505,49,20
+Designer,39199,5,20
+Designer,113953,50,20
+Designer,92647,6,20
+Designer,64158,7,20
+Designer,73570,8,20
+Designer,72399,9,20
+Designer,45932,0.5,20
+Designer,135271,60,20
+Scientist,127392,1,20
+Scientist,71162,10,20
+Scientist,165140,11,20
+Scientist,87411,12,20
+Scientist,68267,13,20
+Scientist,134414,14,20
+Scientist,110375,15,20
+Scientist,113256,16,20
+Scientist,82551,17,20
+Scientist,90590,18,20
+Scientist,99298,19,20
+Scientist,202868,2,20
+Scientist,103231,20,20
+Scientist,130407,21,20
+Scientist,87876,22,20
+Scientist,104439,23,20
+Scientist,120640,24,20
+Scientist,105729,25,20
+Scientist,222896,26,20
+Scientist,113263,27,20
+Scientist,134434,28,20
+Scientist,145000,29,20
+Scientist,53533,3,20
+Scientist,115823,30,20
+Scientist,297427,31,20
+Scientist,123939,32,20
+Scientist,235139,33,20
+Scientist,94030,34,20
+Scientist,112701,35,20
+Scientist,128924,36,20
+Scientist,266172,37,20
+Scientist,139077,38,20
+Scientist,121500,39,20
+Scientist,114082,4,20
+Scientist,125430,40,20
+Scientist,83526,41,20
+Scientist,138061,42,20
+Scientist,110332,43,20
+Scientist,114497,44,20
+Scientist,249765,45,20
+Scientist,121149,46,20
+Scientist,120000,47,20
+Scientist,221800,48,20
+Scientist,84696,49,20
+Scientist,51019,5,20
+Scientist,0,50,20
+Scientist,53068,6,20
+Scientist,75669,7,20
+Scientist,83496,8,20
+Scientist,65585,9,20
+Scientist,12510,0.5,20
+Scientist,129923,60,20
+Product manager,127392,1,21
+Product manager,95243,10,21
+Product manager,97628,11,21
+Product manager,108581,12,21
+Product manager,101464,13,21
+Product manager,93016,14,21
+Product manager,95142,15,21
+Product manager,89920,16,21
+Product manager,84202,17,21
+Product manager,134215,18,21
+Product manager,82216,19,21
+Product manager,30704,2,21
+Product manager,111638,20,21
+Product manager,156674,21,21
+Product manager,105367,22,21
+Product manager,113660,23,21
+Product manager,153407,24,21
+Product manager,128556,25,21
+Product manager,129942,26,21
+Product manager,96179,27,21
+Product manager,196223,28,21
+Product manager,126968,29,21
+Product manager,50038,3,21
+Product manager,116977,30,21
+Product manager,86094,31,21
+Product manager,114754,32,21
+Product manager,99980,33,21
+Product manager,150305,34,21
+Product manager,104611,35,21
+Product manager,102396,36,21
+Product manager,161317,37,21
+Product manager,135689,38,21
+Product manager,90186,39,21
+Product manager,74292,4,21
+Product manager,140940,40,21
+Product manager,159805,41,21
+Product manager,118429,42,21
+Product manager,143931,43,21
+Product manager,151918,44,21
+Product manager,189448,45,21
+Product manager,86112,46,21
+Product manager,0,47,21
+Product manager,375000,48,21
+Product manager,0,49,21
+Product manager,58735,5,21
+Product manager,250000,50,21
+Product manager,65578,6,21
+Product manager,82732,7,21
+Product manager,77865,8,21
+Product manager,69516,9,21
+Product manager,11972,0.5,21
+Product manager,128647,60,21
+Senior Executive,127392,1,22
+Senior Executive,106785,10,22
+Senior Executive,104028,11,22
+Senior Executive,153157,12,22
+Senior Executive,139732,13,22
+Senior Executive,138091,14,22
+Senior Executive,102490,15,22
+Senior Executive,137863,16,22
+Senior Executive,154491,17,22
+Senior Executive,118375,18,22
+Senior Executive,116346,19,22
+Senior Executive,72051,2,22
+Senior Executive,135458,20,22
+Senior Executive,120933,21,22
+Senior Executive,142057,22,22
+Senior Executive,165890,23,22
+Senior Executive,179187,24,22
+Senior Executive,164883,25,22
+Senior Executive,209548,26,22
+Senior Executive,139129,27,22
+Senior Executive,185422,28,22
+Senior Executive,142681,29,22
+Senior Executive,98167,3,22
+Senior Executive,160747,30,22
+Senior Executive,125881,31,22
+Senior Executive,126096,32,22
+Senior Executive,218472,33,22
+Senior Executive,178915,34,22
+Senior Executive,142536,35,22
+Senior Executive,91872,36,22
+Senior Executive,177434,37,22
+Senior Executive,287131,38,22
+Senior Executive,203086,39,22
+Senior Executive,182907,4,22
+Senior Executive,177260,40,22
+Senior Executive,156185,41,22
+Senior Executive,254561,42,22
+Senior Executive,160024,43,22
+Senior Executive,123374,44,22
+Senior Executive,244587,45,22
+Senior Executive,288203,46,22
+Senior Executive,0,47,22
+Senior Executive,385640,48,22
+Senior Executive,149898,49,22
+Senior Executive,68367,5,22
+Senior Executive,240000,50,22
+Senior Executive,86544,6,22
+Senior Executive,99332,7,22
+Senior Executive,50017,8,22
+Senior Executive,117844,9,22
+Senior Executive,21768,0.5,22
+Senior Executive,156138,60,22
+System administrator,55532,1,23
+System administrator,67543,10,23
+System administrator,78262,11,23
+System administrator,70787,12,23
+System administrator,85946,13,23
+System administrator,76325,14,23
+System administrator,87545,15,23
+System administrator,83156,16,23
+System administrator,104557,17,23
+System administrator,106887,18,23
+System administrator,81566,19,23
+System administrator,72482,2,23
+System administrator,115996,20,23
+System administrator,86407,21,23
+System administrator,93988,22,23
+System administrator,95558,23,23
+System administrator,103437,24,23
+System administrator,117540,25,23
+System administrator,106339,26,23
+System administrator,95487,27,23
+System administrator,102589,28,23
+System administrator,125570,29,23
+System administrator,35289,3,23
+System administrator,114078,30,23
+System administrator,127549,31,23
+System administrator,93262,32,23
+System administrator,139073,33,23
+System administrator,106066,34,23
+System administrator,90387,35,23
+System administrator,122161,36,23
+System administrator,154119,37,23
+System administrator,107911,38,23
+System administrator,137028,39,23
+System administrator,92362,4,23
+System administrator,117055,40,23
+System administrator,110236,41,23
+System administrator,146880,42,23
+System administrator,125058,43,23
+System administrator,113490,44,23
+System administrator,95601,45,23
+System administrator,317520,46,23
+System administrator,66589,47,23
+System administrator,137738,48,23
+System administrator,86568,49,23
+System administrator,48381,5,23
+System administrator,291577,50,23
+System administrator,80055,6,23
+System administrator,67270,7,23
+System administrator,64764,8,23
+System administrator,67861,9,23
+System administrator,21390,0.5,23
+System administrator,146285,60,23
+Blockchain,142464,1,24
+Blockchain,136776,10,24
+Blockchain,89201,11,24
+Blockchain,143393,12,24
+Blockchain,94973,13,24
+Blockchain,115774,14,24
+Blockchain,217019,15,24
+Blockchain,106475,16,24
+Blockchain,104812,17,24
+Blockchain,113896,18,24
+Blockchain,119105,19,24
+Blockchain,26524,2,24
+Blockchain,139931,20,24
+Blockchain,128547,21,24
+Blockchain,147313,22,24
+Blockchain,97856,23,24
+Blockchain,130654,24,24
+Blockchain,167481,25,24
+Blockchain,136394,26,24
+Blockchain,140963,27,24
+Blockchain,207542,28,24
+Blockchain,84000,29,24
+Blockchain,67512,3,24
+Blockchain,172526,30,24
+Blockchain,81666,31,24
+Blockchain,133526,32,24
+Blockchain,117126,33,24
+Blockchain,67568,34,24
+Blockchain,139635,35,24
+Blockchain,151235,36,24
+Blockchain,197284,37,24
+Blockchain,0,38,24
+Blockchain,0,39,24
+Blockchain,45460,4,24
+Blockchain,137157,40,24
+Blockchain,0,41,24
+Blockchain,450000,42,24
+Blockchain,177000,43,24
+Blockchain,0,44,24
+Blockchain,0,45,24
+Blockchain,37392,46,24
+Blockchain,0,47,24
+Blockchain,800000,48,24
+Blockchain,0,49,24
+Blockchain,63809,5,24
+Blockchain,200000,50,24
+Blockchain,85034,6,24
+Blockchain,69523,7,24
+Blockchain,89169,8,24
+Blockchain,69965,9,24
+Blockchain,9000,0.5,24
+Blockchain,0,60,24
+Marketing or sales professional,127392,1,25
+Marketing or sales professional,99151,10,25
+Marketing or sales professional,76161,11,25
+Marketing or sales professional,91124,12,25
+Marketing or sales professional,22486,13,25
+Marketing or sales professional,239394,14,25
+Marketing or sales professional,74396,15,25
+Marketing or sales professional,89496,16,25
+Marketing or sales professional,264750,17,25
+Marketing or sales professional,125914,18,25
+Marketing or sales professional,31577,19,25
+Marketing or sales professional,53321,2,25
+Marketing or sales professional,143266,20,25
+Marketing or sales professional,0,21,25
+Marketing or sales professional,50314,22,25
+Marketing or sales professional,75730,23,25
+Marketing or sales professional,132835,24,25
+Marketing or sales professional,106709,25,25
+Marketing or sales professional,110331,26,25
+Marketing or sales professional,139125,27,25
+Marketing or sales professional,127230,28,25
+Marketing or sales professional,135000,29,25
+Marketing or sales professional,49026,3,25
+Marketing or sales professional,126408,30,25
+Marketing or sales professional,0,31,25
+Marketing or sales professional,0,32,25
+Marketing or sales professional,0,33,25
+Marketing or sales professional,250000,34,25
+Marketing or sales professional,68690,35,25
+Marketing or sales professional,0,36,25
+Marketing or sales professional,58654,37,25
+Marketing or sales professional,38388,38,25
+Marketing or sales professional,0,39,25
+Marketing or sales professional,94319,4,25
+Marketing or sales professional,123902,40,25
+Marketing or sales professional,0,41,25
+Marketing or sales professional,193156,42,25
+Marketing or sales professional,195000,43,25
+Marketing or sales professional,82976,44,25
+Marketing or sales professional,0,45,25
+Marketing or sales professional,0,46,25
+Marketing or sales professional,0,47,25
+Marketing or sales professional,200000,48,25
+Marketing or sales professional,190000,49,25
+Marketing or sales professional,97123,5,25
+Marketing or sales professional,0,50,25
+Marketing or sales professional,50547,6,25
+Marketing or sales professional,81195,7,25
+Marketing or sales professional,54623,8,25
+Marketing or sales professional,41382,9,25
+Marketing or sales professional,23040,0.5,25
+Marketing or sales professional,125430,60,25
+Security professional,46718,1,26
+Security professional,87661,10,26
+Security professional,119624,11,26
+Security professional,89056,12,26
+Security professional,63139,13,26
+Security professional,107960,14,26
+Security professional,162662,15,26
+Security professional,117766,16,26
+Security professional,111929,17,26
+Security professional,112917,18,26
+Security professional,145987,19,26
+Security professional,80850,2,26
+Security professional,141543,20,26
+Security professional,118592,21,26
+Security professional,100822,22,26
+Security professional,130474,23,26
+Security professional,208396,24,26
+Security professional,128955,25,26
+Security professional,107626,26,26
+Security professional,109057,27,26
+Security professional,130312,28,26
+Security professional,114654,29,26
+Security professional,54804,3,26
+Security professional,141171,30,26
+Security professional,125421,31,26
+Security professional,108030,32,26
+Security professional,129945,33,26
+Security professional,96902,34,26
+Security professional,121024,35,26
+Security professional,107183,36,26
+Security professional,166500,37,26
+Security professional,154771,38,26
+Security professional,211578,39,26
+Security professional,62143,4,26
+Security professional,143207,40,26
+Security professional,171794,41,26
+Security professional,205892,42,26
+Security professional,177000,43,26
+Security professional,131426,44,26
+Security professional,245664,45,26
+Security professional,125749,46,26
+Security professional,166360,47,26
+Security professional,85908,48,26
+Security professional,84696,49,26
+Security professional,70017,5,26
+Security professional,550000,50,26
+Security professional,132343,6,26
+Security professional,75852,7,26
+Security professional,83126,8,26
+Security professional,79355,9,26
+Security professional,21768,0.5,26
+Security professional,161507,60,26
