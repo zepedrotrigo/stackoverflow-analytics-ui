@@ -13,13 +13,38 @@ let svg2 = d3.select("#grouped_barplot")
 		"translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Data
-d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_stacked.csv", function (data) {
+d3.csv("../dataset/avg_salary_by_country_by_job.csv", function (data) {
+	console.log(data)
+
+	selected_job_indexes = [3,12]
+	selected_country_indexes = [0,59,60,61]
+
+    let new_data = [];
+    new_data.columns = [];
+    for (const country_idx of selected_country_indexes)
+        new_data.columns.push(data.columns[country_idx])
+    
+    for (const job_idx of selected_job_indexes) {
+        let myMap = { "Job": data[job_idx].Job }
+
+        for (const country_idx of selected_country_indexes) {
+            let keyName = data.columns[country_idx]
+            let value = data[job_idx][keyName]
+            myMap[keyName] = value;
+        }
+        new_data.push(myMap);
+    }
+
+    data = new_data;
+    console.log(data);
+
+
 
 	// List of countries = header of the csv files = soil condition here
 	let countries = data.columns.slice(1)
 
-	// List of jobs = species here = value of the first column called group -> I show them on the X axis
-	let jobs = d3.map(data, function (d) { return (d.group) }).keys()
+	// List of jobs = species here = value of the first column called Job -> I show them on the X axis
+	let jobs = d3.map(data, function (d) { return (d.Job) }).keys()
 	console.log("countries:\n",countries)
 	console.log("jobs:\n",jobs)
 
@@ -35,7 +60,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/da
 
 	// Add Y axis
 	let y = d3.scaleLinear()
-		.domain([0, 40])
+		.domain([0, 300000])
 		.range([h, 0]);
 	svg2.append("g")
 		.attr("class", "axisWhite")
@@ -55,11 +80,11 @@ d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/da
 	// Show the bars
 	svg2.append("g")
 		.selectAll("g")
-		// Enter in data = loop group per group
+		// Enter in data = loop Job per Job
 		.data(data)
 		.enter()
 		.append("g")
-		.attr("transform", function (d) { return "translate(" + x(d.group) + ",0)"; })
+		.attr("transform", function (d) { return "translate(" + x(d.Job) + ",0)"; })
 		.selectAll("rect")
 		.data(function (d) { return countries.map(function (key) { return { key: key, value: d[key] }; }); })
 		.enter().append("rect")
