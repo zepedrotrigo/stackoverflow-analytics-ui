@@ -45,6 +45,8 @@ d3.queue()
 	.await(ready);
 
 function ready(error, topo) {
+	localStorage.clear();
+	
 	let mouseOver = function(d) {
 		tip.show(d);
 		d3.selectAll(".Country")

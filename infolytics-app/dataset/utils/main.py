@@ -94,8 +94,8 @@ def calc_avg_salary_by_country():
 def avg_salary_by_country_by_job():
     '''Only takes into account full-time employees working full in-person'''
     c = CurrencyConverter()
-    template_jobs_dict = {'Developer embedded applications or devices': [], 'Cloud infrastructure engineer': [], 'Developer front-end': [], 'Project manager': [], 'Product manager': [], 'Engineering manager': [], 'System administrator': [], 'Scientist': [], 'Blockchain': [], 'Data or business analyst': [], 'Engineer data': [], 'Marketing or sales professional': [], 'Student': [], 'Developer full-stack': [], 'Data scientist or machine learning specialist': [], 'Other (please specify):': [], 'Security professional': [], 'Engineer site reliability': [], 'Developer game or graphics': [], 'Designer': [], 'Developer mobile': [], 'DevOps specialist': [], 'Developer desktop or enterprise applications': [], 'NA': [], 'Database administrator': [], 'Academic researcher': [], 'Developer QA or test': [], 'Developer back-end': [], 'Educator': [], 'Senior Executive (C-Suite VP etc.)': []}
-    d = {} # {"Country":  {"Job1": [SumOfCompTotal, NoOfRespondents], ...}}
+    template_countries_dict = {'Andorra': [], 'Argentina': [], 'Armenia': [], 'Australia': [], 'Austria': [], 'Bangladesh': [], 'Belarus': [], 'Belgium': [], 'Brazil': [], 'Bulgaria': [], 'Cambodia': [], 'Canada': [], 'China': [], 'Croatia': [], 'Cuba': [], 'Cyprus': [], 'Czech Republic': [], 'Democratic Republic of the Congo': [], 'Denmark': [], 'Ecuador': [], 'El Salvador': [], 'Estonia': [], 'Finland': [], 'France': [], 'Germany': [], 'Ghana': [], 'Greece': [], 'Hong Kong (S.A.R.)': [], 'Hungary': [], 'India': [], 'Indonesia': [], 'Iran, Islamic Republic of...': [], 'Iraq': [], 'Ireland': [], 'Israel': [], 'Italy': [], 'Jamaica': [], 'Japan': [], 'Kosovo': [], 'Latvia': [], 'Lebanon': [], 'Lithuania': [], 'Luxembourg': [], 'Malaysia': [], 'Malta': [], 'Mexico': [], 'Mongolia': [], 'Montenegro': [], 'Myanmar': [], 'Nepal': [], 'Netherlands': [], 'New Zealand': [], 'Nicaragua': [], 'Norway': [], 'Pakistan': [], 'Palestine': [], 'Panama': [], 'Philippines': [], 'Poland': [], 'Portugal': [], 'Republic of Korea': [], 'Republic of Moldova': [], 'Romania': [], 'Russian Federation': [], 'Saudi Arabia': [], 'Serbia': [], 'Singapore': [], 'Slovakia': [], 'Slovenia': [], 'South Africa': [], 'South Korea': [], 'Spain': [], 'Sri Lanka': [], 'Suriname': [], 'Sweden': [], 'Switzerland': [], 'Taiwan': [], 'Tajikistan': [], 'Thailand': [], 'Turkey': [], 'Turkmenistan': [], 'Ukraine': [], 'United Arab Emirates': [], 'United Kingdom of Great Britain and Northern Ireland': [], 'United States of America': [], 'Uruguay': [], 'Uzbekistan': [], 'Venezuela, Bolivarian Republic of...': [], 'Viet Nam': [], 'Zimbabwe': []}
+    d = {} # {"Job":  {"Country1": [salary1,salary2,...], ...}}
 
     with open("../survey.csv", 'r') as f:
         csvreader = csv.DictReader(f)
@@ -128,16 +128,17 @@ def avg_salary_by_country_by_job():
                 annual_salary = comp_total*52
             
             for job in jobs:
-                if country in d and job in d[country]:
-                    d[country][job].append(annual_salary)
+                if job in d and country in d[job]:
+                    d[job][country].append(annual_salary)
                 else:
-                    d[country] = copy.deepcopy(template_jobs_dict)
-                    d[country][job] = [annual_salary]
-            
+                    d[job] = copy.deepcopy(template_countries_dict)
+                    d[job][country] = [annual_salary]
+    
+    d = dict(sorted(d.items(),key=lambda x:x[0],reverse = False))
 
 
     with open("../avg_salary_by_country_by_job.csv", 'w') as f:
-        csv_header = 'Country,' + ''.join(str(e+",") for e in template_jobs_dict)[:-1]
+        csv_header = 'Job,' + ''.join(str(e+",") for e in template_countries_dict)[:-1]
         f.write(f"{csv_header}\n")
 
         for k,v in d.items():
@@ -162,8 +163,8 @@ def avg_salary_by_country_by_job():
 
 def main():
     #split_data_by_country()
-    calc_avg_salary_by_country()
-    #avg_salary_by_country_by_job()
+    #calc_avg_salary_by_country()
+    avg_salary_by_country_by_job()
 
 
 if __name__ == '__main__':
