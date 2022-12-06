@@ -1,0 +1,73 @@
+<!-- Code from d3-graph-gallery.com -->
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="./styles/app.css">
+	<link rel="stylesheet" type="text/css" href="./styles/d3-tip.css">
+	<style type="text/css">
+		#tooltip{
+			position: absolute;
+			width: 200px;
+			height: auto;
+			padding: 10px;
+			background-color: rgb(10, 2, 126);
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+			-webkit-box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+			-moz-box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+			box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+			pointer-events: none;
+		}
+		#tooltip.hidden{
+			display: none;
+		}
+		#tooltip p{
+			margin: 0;
+			font-family: sans-serif;
+			font-size: 16px;
+			line-height: 20px;
+		}
+	</style>
+</head>
+
+
+<body>
+	<!-- Create an element where the map will take place -->
+	<div class="flex-container">
+		<p>Here you can select a country</p>
+		<select id="country" onchange="onChangeSelection()">
+			<option value="Spain">Spain</option>
+			<option value="Germany">Germany</option>
+			<option value="Italy">Italy</option>
+		</select>
+	</div>
+	<div class="flex-container">
+		<div class="container">
+			<div id="tooltip" class="hidden">
+				<p><strong id="textLabel">Bar Value</strong></p>
+				<p><span id="value">100</span></p>
+			</div>
+			<div id="horizontal_bar_chart" style="height: 450px; width: 700px;"></div>
+		</div>
+		<div class="container h-27">
+		</div>
+	</div>
+	<div class="flex-container">
+		<div class="containerBig">
+			<div id="bar_chart_gender" style="height: 600px; width: 2000px;"></div>
+		</div>
+	</div>
+</body>
+
+
+<!-- Load d3.js -->
+<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+<!-- Local scripts -->
+<script src="./scripts/d3-tip.js"></script>
+<script src="./scripts/charts.js"></script>
