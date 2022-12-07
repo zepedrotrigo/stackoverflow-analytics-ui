@@ -9,9 +9,11 @@ let projection = d3.geoRobinson()
 	.center([770, 0])
 	.scale(150)
 
-let svg = d3.select("svg")
-	.attr("width", width)
-	.attr("height", height);
+let svg = d3.select("div#svg-map-container")
+	.append("svg")
+	.attr("preserveAspectRatio", "xMinYMin meet")
+	.attr("viewBox", "0 0 800 434")
+	.classed("svg-content", true);
 
 let path = d3.geoPath()
 	.projection(projection);
@@ -140,14 +142,16 @@ let margin = { top: 5, right: 30, bottom: 100, left: 50 },
 	w = 460 - margin.left - margin.right,
 	h = 460 - margin.top - margin.bottom;
 
-// append the svg object to the body of the page
-let svg2 = d3.select("#grouped_barplot")
+let svg2 = d3.select("div#grouped_barplot")
 	.append("svg")
-	.attr("width", w + margin.left + margin.right)
-	.attr("height", h + margin.top + margin.bottom)
+	.attr("preserveAspectRatio", "xMinYMin meet")
+	.attr("viewBox", "0 0 460 460")
+	.classed("svg-content", true)
 	.append("g")
 	.attr("transform",
 		"translate(" + margin.left + "," + margin.top + ")");
+
+
 
 function update_bar_plot() {
 	try {
@@ -235,7 +239,7 @@ function update_bar_plot() {
 			.call(d3.axisBottom(x).tickSize(0))
 			.selectAll("text")
 			.attr("transform", "translate(0,15)rotate(-10)");
-		
+
 		svg2.append("text")
 			.attr("class", "y label")
 			.attr("text-anchor", "end")

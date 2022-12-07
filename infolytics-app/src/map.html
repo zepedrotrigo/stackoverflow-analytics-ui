@@ -13,22 +13,26 @@
 	<!-- Create an element where the map will take place -->
 	<div class="flex-col">
 		<div class="flex-row">
-			<div class="container h-27" style="padding-top: 1rem;">
-				<h3 class="center">Infolytics - Explore our world map to compare different salaries around the world!</h3>
-				<svg id="my_dataviz"></svg>
+			<div class="container w-102" style="padding-top: 1em;">
+				<h3 class="center">Infolytics - Explore our world map to compare different salaries around the world!
+				</h3>
+				<div id="svg-map-container" class="svg-container pd-b35">
+					<svg id="my_dataviz"></svg>
+				</div>
 				<p class="center">Scroll to zoom!</p>
-				<div class="center"><button onclick="location.href='./detailed.html'">Show world-wide general statistics</button></div>
+				<div class="center"><button onclick="location.href='./detailed.html'">Show world-wide general
+						statistics</button></div>
 			</div>
-			<div class="container h-27" style="padding-top: 1rem;">
+			<div class="container" style="padding-top: 1em;">
 				<p id="selected-countries">Selected countries: </p>
-				<span style="height: 20rem"></span>
+				<span style="height: 20em"></span>
 				<label for="cars">Choose Job Type:</label>
 				<select name="jobs" id="jobs0" onchange="update_bar_plot()"></select>
 				<select name="jobs" id="jobs1" onchange="update_bar_plot()"></select>
 				<select name="jobs" id="jobs2" onchange="update_bar_plot()"></select>
 				<p>&nbsp;</p>
 				<h3 style="text-align: center">Salary comparison per job and country</h3>
-				<div id="grouped_barplot"></div>
+				<div id="grouped_barplot" class="svg-container"></div>
 			</div>
 		</div>
 	</div>

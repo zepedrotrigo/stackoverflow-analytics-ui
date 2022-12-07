@@ -7,7 +7,7 @@ body {
 }
 
 select {
-    width: 6rem;
+    width: 6em;
 }
 
 .flex-row {
@@ -19,32 +19,52 @@ select {
     flex-direction: column;
 }
 
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.pd-b35 {
+    padding-bottom: 35%;
+}
+
+.svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .containerSmall {
-    width: 30rem;
+    width: 30em;
     align-self: center;
     text-align: left;
-    margin: 2rem;
-    padding: 2rem;
+    margin: 2em;
+    padding: 2em;
     background-color: #1b2236;
     border-radius: 15px;
 }
 
 .container {
-    width: 50rem;
+    width: 50em;
     align-self: center;
     text-align: left;
-    margin: 2rem;
-    padding: 2rem;
+    margin: 2em;
+    padding: 2em;
     background-color: #1b2236;
     border-radius: 15px;
 }
 
 .containerBig {
-    width: 105rem;
+    width: 105em;
     align-self: center;
     text-align: left;
-    margin: 2rem;
-    padding: 2rem;
+    margin: 2em;
+    padding: 2em;
     background-color: #1b2236;
     border-radius: 15px;
 }
@@ -54,11 +74,11 @@ select {
 }
 
 .h-27 {
-    height: 37.5rem;
+    height: 37.5em;
 }
 
-.w-87 {
-    width: 87rem;
+.w-102 {
+    width: 102em;
 }
 
 axisWhite line{
