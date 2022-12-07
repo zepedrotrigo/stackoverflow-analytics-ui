@@ -553,10 +553,10 @@ function piechart(){
 
     
     var data = [
-        {age: "25-34 years old", number: 28112},
-        {age: "35-44 years old", number: 13988},
         {age: "Under 18 years old", number: 3866},
         {age: "18-24 years old", number: 16646},
+        {age: "25-34 years old", number: 28112},
+        {age: "35-44 years old", number: 13988},
         {age: "45-54 years old", number: 5281},
         {age: "55-64 years old", number: 1978},
         {age: "65 years or older", number: 554},
@@ -616,6 +616,8 @@ function piechart(){
             .style("opacity", 0);
     
         g.append("text")
+            .attr("x", '5px')
+            .attr("y", '5px')
             .attr("class", "name-text")
             .text(`${d.data.age} (${d.data.number})`)
             .attr('text-anchor', 'middle');
@@ -696,6 +698,169 @@ function piechart(){
 }
 
 
+
+
+function scatter(){
+    // set the dimensions and margins of the graph
+    var margin7 = {top: 50, right: 100, bottom: 100, left: 150},
+    w7 = document.getElementById('scatter').offsetWidth;
+    h7 = document.getElementById('scatter').offsetHeight;
+    height7 = h7 - h7*(margin7.top/1000) - h7*(margin7.bottom/1000);
+    width7 = w7 - w7*(margin7.right/1000) - w7*(margin7.left/1000);
+
+    // append the svg object to the body of the page
+    var svg = d3.select("#scatter")
+    .append("svg")
+    .attr("width", width7 + margin7.left + margin7.right)
+    .attr("height", height7 + margin7.top + margin7.bottom)
+    .append("g")
+    .attr("transform",
+        "translate(" + margin7.left + "," + margin7.top + ")");
+
+    //Read the data
+    d3.csv("../orgsize_salary.csv", function(data) {
+
+        // Add X axis
+        var x = d3.scaleBand()
+        .domain(data.map(function(d){ return d.orgsize; }))
+        .range([ 0, width7 ]);
+        svg.append("g")
+        .attr("transform", "translate(0," + height7 + ")")
+        .call(d3.axisBottom(x))
+        .selectAll("text")
+        .attr("transform", "translate(0,0)rotate(-25)")
+        .style("text-anchor", "end")
+        .style('font-size', '12px')
+        .attr("fill", "grey" );
+
+        // Add Y axis
+        var y = d3.scaleLinear()
+        .domain([0, 500000])
+        .range([ height7, 0]);
+        svg.append("g")
+        .call(d3.axisLeft(y))
+        .selectAll("text")
+        .attr("transform", "translate(0,0)")
+        .style("text-anchor", "end")
+        .style('font-size', '12px')
+        .attr("fill", "grey" );
+
+        // Add dots
+        svg.append('g')
+        .selectAll("dot")
+        .data(data)
+        .enter()
+        .append("circle")
+        .on("mouseover", onMouseOver2) // Add listener for event
+        .on("mouseout", onMouseOut2)
+        .attr("transform", "translate(26,0)")
+        .attr("cx", function (d) { return x(d.orgsize); } )
+        .attr("cy", function (d) { return y(d.salary); } )
+        .attr("r", 5)
+        .style("fill", "#ff0000")
+        
+        d3.csv("../orgsize_salaryALL.csv", function(data2) {
+            // Add dots
+            svg.append('g')
+            .selectAll("dot")
+            .data(data2)
+            .enter()
+            .append("circle")
+            .attr("transform", "translate(26,0)")
+            .attr("cx", function (d) { return x(d.orgsize); } )
+            .attr("cy", function (d) { return y(d.salary); } )
+            .attr("r", 1.5)
+            .style("fill", "#69b3a2")
+        })
+
+        function onMouseOver2(d, i) {
+            // Get bar's xy values, ,then augment for the tooltip
+            var xPos = width7*2.75 + margin7.left;
+            var yPos = margin7.top + margin7.bottom;
+    
+            // Update Tooltip's position and value
+            d3.select('#tooltip2')
+                .style('left', xPos + 'px')
+                .style('top', yPos + 'px')
+                .select('#textLabel2')
+                .text(d.orgsize)
+            
+            d3.select('#tooltip2')
+                .style('left', xPos + 'px')
+                .style('top', yPos + 'px')
+                .select('#value2')
+                .text(d.salary)
+                
+            
+            d3.select('#tooltip2').classed('hidden', false);
+    
+        }
+    
+        // Mouseout event handler
+        function onMouseOut2(d, i){
+            d3.select('#tooltip2').classed('hidden', true);
+        }
+    })
+
+    // Title
+    svg.append('text')
+    .attr('x', width/2)
+    .attr('y', -30)
+    .attr('text-anchor', 'middle')
+    .style('font-family', 'Helvetica')
+    .style('font-size', '24px')
+    .text('Salary by Company Size')
+    .attr("fill", "white" );
+
+    // X label
+    svg.append('text')
+    .attr('x', width + 100)
+    .attr('y', height + 45)
+    .attr('text-anchor', 'middle')
+    .style('font-family', 'Helvetica')
+    .style('font-size', '12')
+    .text('Company Size')
+    .attr("fill", "white" );
+    
+    // Y label
+    svg.append('text')
+    .attr('text-anchor', 'middle')
+    .attr('transform', 'translate(-10,-15)')
+    .style('font-family', 'Helvetica')
+    .style('font-size', '12')
+    .text('Salary')
+    .attr("fill", "white" );
+
+    svg.append("circle")
+    .attr("cx",width7+15)
+    .attr("cy",130)
+    .attr("r", 6)
+    .style("fill", "#ff0000")
+    svg.append("circle")
+    .attr("cx",width7+15)
+    .attr("cy",160)
+    .attr("r", 6)
+    .style("fill", "#69b3a2")
+
+    svg.append("text")
+    .attr("x", width7+30)
+    .attr("y", 130)
+    .text("Average Salary")
+    .style("font-size", "10px")
+    .attr("alignment-baseline","middle")
+    .style("fill", "white")
+    svg.append("text")
+    .attr("x", width7+30)
+    .attr("y", 160)
+    .text("Independent")
+    .style("font-size", "10px")
+    .attr("alignment-baseline","middle")
+    .style("fill", "white")
+
+
+}
+
+
 function onChangeSelection(){
     
 }
@@ -703,3 +868,4 @@ function onChangeSelection(){
 horizontalBarChart();
 bar_chart_gender();
 piechart();
+scatter();

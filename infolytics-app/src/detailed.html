@@ -30,6 +30,29 @@
 			font-size: 16px;
 			line-height: 20px;
 		}
+		#tooltip2{
+			position: absolute;
+			width: 200px;
+			height: auto;
+			padding: 10px;
+			background-color: #69b3a2;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+			-webkit-box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+			-moz-box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+			box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+			pointer-events: none;
+		}
+		#tooltip2.hidden{
+			display: none;
+		}
+		#tooltip2 p{
+			margin: 0;
+			font-family: sans-serif;
+			font-size: 16px;
+			line-height: 20px;
+		}
 		.axis {
 		opacity: 0.4;
 		}
@@ -84,7 +107,11 @@
 			<div id="horizontal_bar_chart" style="height: 500px; width: 700px;"></div>
 		</div>
 		<div class="container">
-			<div id="parralel" style="height: 500px; width: 700px;"></div>
+			<div id="tooltip2" class="hidden">
+				<p><strong id="textLabel2">Bar Value</strong></p>
+				<p><span id="value2">100</span></p>
+			</div>
+			<div id="scatter" style="height: 500px; width: 700px;"></div>
 		</div>
 	</div>
 	<div class="flex-row">
