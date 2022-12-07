@@ -92,44 +92,34 @@
 
 
 <body>
-	<!-- Create an element where the map will take place -->
-	<div class="flex-container" style="text-align: center;">
-		<h1>General Statistics</h1>
-		<!--<p>Here you can select a country</p>
-		<select id="country" onchange="onChangeSelection()">
-			<option value="Spain">Spain</option>
-			<option value="Germany">Germany</option>
-			<option value="Italy">Italy</option>
-		</select>-->
-	</div>
 	<div class="flex-row">
 		<div class="container">
 			<div id="tooltip" class="hidden">
 				<p><strong id="textLabel">Bar Value</strong></p>
 				<p><span id="value">100</span></p>
 			</div>
-			<div id="horizontal_bar_chart" style="height: 500px; width: 700px;"></div>
+			<div id="horizontal_bar_chart" class="svg-container" style="padding-bottom: 75%"></div>
 		</div>
 		<div class="container">
 			<div id="tooltip2" class="hidden">
 				<p><strong id="textLabel2">Bar Value</strong></p>
 				<p><span id="value2">100</span></p>
 			</div>
-			<div id="scatter" style="height: 500px; width: 700px;"></div>
+			<div id="scatter" class="svg-container" style="padding-bottom: 75%"></div>
 		</div>
 	</div>
 	<div class="flex-row">
 		<div class="container">
 			<h3 style="text-align: center;">Number of answers by Age</h3>
-			<div id="piechart" style="height: 500px; width: 700px;"></div>
+			<div id="piechart" class="svg-container" style="padding-bottom: 65%; height: 0em;"></div>
 		</div>
 		<div class="container">
-			<div id="heatmap" style="height: 500px; width: 700px;"></div>
+			<div id="heatmap"></div>
 		</div>
 	</div>
 	<div class="flex-container">
 		<div class="containerBig">
-			<div id="bar_chart_gender" style="height: 800px; width: 2000px;"></div>
+			<div id="bar_chart_gender" class="svg-container" style="padding-bottom: 40%"></div>
 		</div>
 	</div>
 </body>

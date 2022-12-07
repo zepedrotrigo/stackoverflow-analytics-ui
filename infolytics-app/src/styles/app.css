@@ -60,9 +60,9 @@ select {
 }
 
 .containerBig {
-    width: 105em;
+    width: 87em;
     align-self: center;
-    text-align: left;
+    text-align: center;
     margin: 2em;
     padding: 2em;
     background-color: #1b2236;
@@ -79,6 +79,10 @@ select {
 
 .w-102 {
     width: 102em;
+}
+
+.pie-w {
+    width: 50%;
 }
 
 axisWhite line{
