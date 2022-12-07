@@ -82,6 +82,9 @@ function ready(error, topo) {
 
 	let mouseClick = function (d) {
 		let prevSelectedCountries = localStorage.getItem("selectedCountries").split(',');
+		if (prevSelectedCountries[0] === null || prevSelectedCountries[0].trim() === "")
+			prevSelectedCountries = []
+
 		let country = d.properties.name;
 		if (prevSelectedCountries.includes(country)) {
 			const index = prevSelectedCountries.indexOf(country);
@@ -133,9 +136,9 @@ function ready(error, topo) {
 /* -------------------------------------------------------------------------- */
 
 // set the dimensions and margins of the graph
-let margin = { top: 10, right: 30, bottom: 100, left: 50 },
+let margin = { top: 0, right: 30, bottom: 100, left: 50 },
 	w = 460 - margin.left - margin.right,
-	h = 400 - margin.top - margin.bottom;
+	h = 460 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 let svg2 = d3.select("#grouped_barplot")
@@ -171,7 +174,7 @@ function update_bar_plot() {
 				opt.innerHTML = jobs[i];
 				select.appendChild(opt);
 			}
-			select.value = 12+n;
+			select.value = 12 + n;
 		}
 
 		/* ------------------------- Get selected country/job inputs ------------------------ */
@@ -267,5 +270,32 @@ function update_bar_plot() {
 			.attr("width", xSubgroup.bandwidth())
 			.attr("height", function (d) { return h - y(d.value); })
 			.attr("fill", function (d) { return color(d.key); });
+
+
+		// Add one dot in the legend for each name.
+		if (!countries.includes(undefined)) {
+			var size = 20
+			svg2.selectAll("mydots")
+				.data(countries)
+				.enter()
+				.append("rect")
+				.attr("x", 300)
+				.attr("y", function (d, i) { return 5 + i * (size + 5) }) // 100 is where the first dot appears. 25 is the distance between dots
+				.attr("width", size)
+				.attr("height", size)
+				.style("fill", function (d) { return color(d) })
+
+			// Add one dot in the legend for each name.
+			svg2.selectAll("mylabels")
+				.data(countries)
+				.enter()
+				.append("text")
+				.attr("x", 300 + size * 1.2)
+				.attr("y", function (d, i) { return 5 + i * (size + 5) + (size / 2) }) // 100 is where the first dot appears. 25 is the distance between dots
+				.style("fill", function (d) { return color(d) })
+				.text(function (d) { return d })
+				.attr("text-anchor", "left")
+				.style("alignment-baseline", "middle")
+		}
 	})
 }
