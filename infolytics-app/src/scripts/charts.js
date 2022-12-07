@@ -3,7 +3,7 @@
 
 function horizontalBarChart() {
     // set the dimensions and margins of the graph
-    var margin = { top: 50, right: 100, bottom: 150, left: 250 },
+    var margin = { top: 70, right: 150, bottom: 150, left: 270 },
         w = 700,
         h = 500;
     height = h - h * (margin.top / 1000) - h * (margin.bottom / 1000);
@@ -26,6 +26,7 @@ function horizontalBarChart() {
             .domain([0, 300000])
             .range([0, width]);
         svg.append("g")
+            .attr("class", "axisWhite")
             .attr("transform", "translate(0," + height + ")")
             .call(d3.axisBottom(x))
             .selectAll("text")
@@ -39,6 +40,7 @@ function horizontalBarChart() {
             .domain(data.map(function (d) { return d.edLevel; }))
             .padding(.15);
         svg.append("g")
+            .attr("class", "axisWhite")
             .call(d3.axisLeft(y))
             .selectAll("text")
             .attr("transform", "translate(0,0)")
@@ -71,27 +73,27 @@ function horizontalBarChart() {
     // Title
     svg.append('text')
         .attr('x', width / 3)
-        .attr('y', -30)
+        .attr('y', -50)
         .attr('text-anchor', 'middle')
         .style('font-family', 'Helvetica')
         .style('font-size', '24px')
-        .text('Average Salary by Educational Level')
+        .text('Average salary by educational level')
         .attr("fill", "white");
 
     // X label
     svg.append('text')
-        .attr('x', width + 30)
-        .attr('y', height + 45)
+        .attr('x', width + 10)
+        .attr('y', height + 10)
         .attr('text-anchor', 'middle')
         .style('font-family', 'Helvetica')
         .style('font-size', '12')
-        .text('Average Salary')
+        .text('$')
         .attr("fill", "white");
 
     // Y label
     svg.append('text')
         .attr('text-anchor', 'middle')
-        .attr('transform', 'translate(-20,-5)rotate(0)')
+        .attr('transform', 'translate(-70,-5)rotate(0)')
         .style('font-family', 'Helvetica')
         .style('font-size', '12')
         .text('Educational Level')
@@ -166,6 +168,7 @@ function bar_chart_gender() {
             .range([0, width2])
             .padding([0.4])
         svg.append("g")
+            .attr("class", "axisWhite")
             .attr("transform", "translate(0," + height2 + ")")
             .call(d3.axisBottom(x).tickSize(0))
             .selectAll("text")
@@ -179,6 +182,7 @@ function bar_chart_gender() {
             .domain([0, 150000])
             .range([height2, 0]);
         svg.append("g")
+            .attr("class", "axisWhite")
             .call(d3.axisLeft(y))
             .selectAll("text")
             .attr("transform", "translate(0,0)")
@@ -231,7 +235,7 @@ function bar_chart_gender() {
         .attr('text-anchor', 'middle')
         .style('font-family', 'Helvetica')
         .style('font-size', '24px')
-        .text('Average Salary by Developer Type')
+        .text('Average salary per job and gender')
         .attr("fill", "white");
 
     // X label
@@ -298,7 +302,7 @@ function bar_chart_gender() {
 
 function scatter() {
     // set the dimensions and margins of the graph
-    var margin7 = { top: 50, right: 100, bottom: 100, left: 150 },
+    var margin7 = { top: 70, right: 100, bottom: 100, left: 150 },
         w7 = 600,
         h7 = 450;
     height7 = h7 - h7 * (margin7.top / 1000) - h7 * (margin7.bottom / 1000);
@@ -322,6 +326,7 @@ function scatter() {
             .domain(data.map(function (d) { return d.orgsize; }))
             .range([0, width7]);
         svg.append("g")
+            .attr("class", "axisWhite")
             .attr("transform", "translate(0," + height7 + ")")
             .call(d3.axisBottom(x))
             .selectAll("text")
@@ -335,6 +340,7 @@ function scatter() {
             .domain([0, 500000])
             .range([height7, 0]);
         svg.append("g")
+            .attr("class", "axisWhite")
             .call(d3.axisLeft(y))
             .selectAll("text")
             .attr("transform", "translate(0,0)")
@@ -402,30 +408,30 @@ function scatter() {
     // Title
     svg.append('text')
         .attr('x', width / 2)
-        .attr('y', -30)
+        .attr('y', -50)
         .attr('text-anchor', 'middle')
         .style('font-family', 'Helvetica')
         .style('font-size', '24px')
-        .text('Salary by Company Size')
+        .text('Salary by company size')
         .attr("fill", "white");
 
     // X label
     svg.append('text')
-        .attr('x', width + 100)
-        .attr('y', height + 45)
+        .attr('x', width + 70)
+        .attr('y', height + 25)
         .attr('text-anchor', 'middle')
         .style('font-family', 'Helvetica')
         .style('font-size', '12')
-        .text('Company Size')
+        .text('Company size')
         .attr("fill", "white");
 
     // Y label
     svg.append('text')
         .attr('text-anchor', 'middle')
-        .attr('transform', 'translate(-10,-15)')
+        .attr('transform', 'translate(0,-10)')
         .style('font-family', 'Helvetica')
         .style('font-size', '12')
-        .text('Salary')
+        .text('$')
         .attr("fill", "white");
 
     svg.append("circle")
@@ -654,6 +660,7 @@ function heatmap() {
         .domain(myGroups)
         .padding(0.01);
     svg.append("g")
+        .attr("class", "axisWhite")
         .attr("transform", "translate(0," + height8 + ")")
         .call(d3.axisBottom(x))
         .selectAll("text")
@@ -668,6 +675,7 @@ function heatmap() {
         .domain(myVars)
         .padding(0.01);
     svg.append("g")
+        .attr("class", "axisWhite")
         .call(d3.axisLeft(y))
         .selectAll("text")
         .attr("transform", "translate(0,0)rotate(0)")
@@ -702,17 +710,17 @@ function heatmap() {
         .attr('text-anchor', 'middle')
         .style('font-family', 'Helvetica')
         .style('font-size', '22px')
-        .text('Salary (per year) by Developer Type according with Years of Experience')
+        .text('Salary comparison per job and years of experience')
         .attr("fill", "white");
 
     // X label
     svg.append('text')
-        .attr('x', width + 100)
+        .attr('x', width - 10)
         .attr('y', height + 30)
         .attr('text-anchor', 'middle')
         .style('font-family', 'Helvetica')
         .style('font-size', '12')
-        .text('Developer Type')
+        .text('Jobs')
         .attr("fill", "white");
 
     // Y label
