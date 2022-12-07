@@ -137,6 +137,20 @@ function ready(error, topo) {
 /*                             Draw/Update BarPlot                            */
 /* -------------------------------------------------------------------------- */
 
+/* --------------------- Populate Select input elements --------------------- */
+let jobs = ["Academicresearcher", "Blockchain", "Cloudinfrastructureengineer", "Dataorbusinessanalyst", "Datascientistormachinelearningspecialist", "Databaseadministrator", "Designer", "DevOpsspecialist", "DeveloperQAortest", "Developerback-end", "Developerdesktoporenterpriseapplications", "Developerembeddedapplicationsordevices", "Developerfront-end", "Developerfull-stack", "Developergameorgraphics", "Developermobile", "Educator", "Engineerdata", "Engineersitereliability", "Engineeringmanager", "Marketingorsalesprofessional", "NA", "Other(pleasespecify):", "Productmanager", "Projectmanager", "Scientist", "Securityprofessional", "SeniorExecutive(C-SuiteVPetc.)", "Student", "Systemadministrator"]
+for (let n = 0; n < 3; n++) {
+	var select = document.getElementById('jobs' + n);
+
+	for (let i = 0; i < jobs.length; i++) {
+		const opt = document.createElement('option');
+		opt.value = i;
+		opt.innerHTML = jobs[i];
+		select.appendChild(opt);
+	}
+	select.value = 12 + n;
+}
+
 // set the dimensions and margins of the graph
 let margin = { top: 5, right: 30, bottom: 100, left: 50 },
 	w = 460 - margin.left - margin.right,
@@ -151,8 +165,6 @@ let svg2 = d3.select("div#grouped_barplot")
 	.attr("transform",
 		"translate(" + margin.left + "," + margin.top + ")");
 
-
-
 function update_bar_plot() {
 	try {
 		svg2.selectAll('*').remove();
@@ -164,23 +176,6 @@ function update_bar_plot() {
 
 	// Parse the Data
 	d3.csv("../dataset/avg_salary_by_country_by_job.csv", function (data) {
-		console.log(data)
-
-		/* --------------------- Populate Select input elements --------------------- */
-		let jobs = d3.map(data, function (d) { return (d.Job) }).keys()
-
-		for (let n = 0; n < 3; n++) {
-			var select = document.getElementById('jobs' + n);
-
-			for (let i = 0; i < jobs.length; i++) {
-				const opt = document.createElement('option');
-				opt.value = i;
-				opt.innerHTML = jobs[i];
-				select.appendChild(opt);
-			}
-			select.value = 12 + n;
-		}
-
 		/* ------------------------- Get selected country/job inputs ------------------------ */
 
 		let selected_country_indexes = [0] // needs to be initialized with 0 because first CSV column is "Jobs" and not the Country's name
@@ -226,7 +221,7 @@ function update_bar_plot() {
 		let countries = data.columns.slice(1)
 
 		// List of jobs = species here = value of the first column called Job -> I show them on the X axis
-		jobs = d3.map(data, function (d) { return (d.Job) }).keys()
+		let jobs = d3.map(data, function (d) { return (d.Job) }).keys()
 
 		// Add X axis
 		let x = d3.scaleBand()

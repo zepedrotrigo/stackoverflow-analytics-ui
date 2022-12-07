@@ -39,30 +39,10 @@ select {
     left: 0;
 }
 
-.containerSmall {
-    width: 30em;
-    align-self: center;
-    text-align: left;
-    margin: 2em;
-    padding: 2em;
-    background-color: #1b2236;
-    border-radius: 15px;
-}
-
 .container {
     width: 50em;
     align-self: center;
     text-align: left;
-    margin: 2em;
-    padding: 2em;
-    background-color: #1b2236;
-    border-radius: 15px;
-}
-
-.containerBig {
-    width: 87em;
-    align-self: center;
-    text-align: center;
     margin: 2em;
     padding: 2em;
     background-color: #1b2236;
