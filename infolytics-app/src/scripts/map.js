@@ -136,7 +136,7 @@ function ready(error, topo) {
 /* -------------------------------------------------------------------------- */
 
 // set the dimensions and margins of the graph
-let margin = { top: 0, right: 30, bottom: 100, left: 50 },
+let margin = { top: 5, right: 30, bottom: 100, left: 50 },
 	w = 460 - margin.left - margin.right,
 	h = 460 - margin.top - margin.bottom;
 
@@ -235,6 +235,16 @@ function update_bar_plot() {
 			.call(d3.axisBottom(x).tickSize(0))
 			.selectAll("text")
 			.attr("transform", "translate(0,15)rotate(-10)");
+		
+		svg2.append("text")
+			.attr("class", "y label")
+			.attr("text-anchor", "end")
+			.attr("y", -5)
+			.attr("x", -10)
+			.attr("dy", ".75em")
+			.text("$")
+			.style('fill', 'white');
+
 		// Add Y axis
 		let y = d3.scaleLinear()
 			.domain([0, max_y * 1.15])
