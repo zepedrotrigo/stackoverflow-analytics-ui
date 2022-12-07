@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	
+
 	<link rel="stylesheet" type="text/css" href="./styles/app.css">
 	<link rel="stylesheet" type="text/css" href="./styles/d3-tip.css">
 </head>
@@ -23,6 +23,10 @@
 			</div>
 			<div class="container h-27">
 				<p id="selected-countries">Selected countries: </p>
+				<label for="cars">Choose Job Type:</label>
+				<select name="jobs" id="jobs0" onchange="update_bar_plot()"></select>
+				<select name="jobs" id="jobs1" onchange="update_bar_plot()"></select>
+				<select name="jobs" id="jobs2" onchange="update_bar_plot()"></select>
 				<div id="grouped_barplot"></div>
 			</div>
 		</div>

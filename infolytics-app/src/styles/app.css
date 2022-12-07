@@ -6,6 +6,10 @@ body {
     color:whitesmoke;
 }
 
+select {
+    width: 6rem;
+}
+
 .flex-row {
     display: flex;
 }

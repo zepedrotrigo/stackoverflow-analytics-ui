@@ -1,3 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/*                                     Map                                    */
+/* -------------------------------------------------------------------------- */
+
 let width = 800,
 	height = 434;
 
@@ -154,12 +158,38 @@ function update_bar_plot() {
 	// Parse the Data
 	d3.csv("../dataset/avg_salary_by_country_by_job.csv", function (data) {
 		console.log(data)
+
+		/* --------------------- Populate Select input elements --------------------- */
+		let jobs = d3.map(data, function (d) { return (d.Job) }).keys()
+
+		for (let n = 0; n < 3; n++) {
+			var select = document.getElementById('jobs' + n);
+
+			for (let i = 0; i < jobs.length; i++) {
+				const opt = document.createElement('option');
+				opt.value = i;
+				opt.innerHTML = jobs[i];
+				select.appendChild(opt);
+			}
+			select.value = 12+n;
+		}
+
+		/* ------------------------- Get selected country/job inputs ------------------------ */
+
 		let selected_country_indexes = [0] // needs to be initialized with 0 because first CSV column is "Jobs" and not the Country's name
-		let selected_job_indexes = [12, 13, 9]
+		let selected_job_indexes = []
+
+		for (let n = 0; n < 3; n++) {
+			var opt = document.getElementById("jobs" + n).value;
+			selected_job_indexes.push(opt)
+		}
+
 		let selectedCountries = localStorage.getItem("selectedCountries").split(',');
 		for (let [k, v] of selectedCountries.entries()) {
 			selected_country_indexes.push(data.columns.indexOf(v))
 		}
+
+		/* ------------------------- Keep only selected data ------------------------ */
 
 		let new_data = [];
 		new_data.columns = [];
@@ -183,11 +213,13 @@ function update_bar_plot() {
 
 		data = new_data;
 
+		/* -------------------------------- Draw Plot ------------------------------- */
+
 		// List of countries = header of the csv files = soil condition here
 		let countries = data.columns.slice(1)
 
 		// List of jobs = species here = value of the first column called Job -> I show them on the X axis
-		let jobs = d3.map(data, function (d) { return (d.Job) }).keys()
+		jobs = d3.map(data, function (d) { return (d.Job) }).keys()
 
 		// Add X axis
 		let x = d3.scaleBand()
