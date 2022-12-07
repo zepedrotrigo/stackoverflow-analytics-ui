@@ -1,3 +1,6 @@
+
+// ---------------------------------------- HORIZONTAL BAR CHART WITH AVG SALARY BY EDUCATIONAL LEVEL
+
 function horizontalBarChart() {
     // set the dimensions and margins of the graph
     var margin = {top: 50, right: 100, bottom: 150, left: 250},
@@ -128,7 +131,7 @@ function horizontalBarChart() {
 }
 
 
-
+// ---------------------------------------- BAR CHART WITH AVG SALARY BY GENDER
 
 
 function bar_chart_gender(){
@@ -173,7 +176,7 @@ function bar_chart_gender(){
 
     // Add Y axis
     var y = d3.scaleLinear()
-    .domain([0, 250000])
+    .domain([0, 150000])
     .range([ height2, 0 ]);
     svg.append("g")
     .call(d3.axisLeft(y))
@@ -192,7 +195,7 @@ function bar_chart_gender(){
     // color palette = one color per subgroup
     var color = d3.scaleOrdinal()
     .domain(subgroups)
-    .range(['#0eab00','#4d91ff','#ff96e1'])
+    .range(['#69b3a2','#4d99ff','#ff96e1'])
 
     // Show the bars
     svg.append("g")
@@ -254,12 +257,12 @@ function bar_chart_gender(){
     .attr("cx",width2)
     .attr("cy",130)
     .attr("r", 8)
-    .style("fill", "#0eab00")
+    .style("fill", "#69b3a2")
     svg.append("circle")
     .attr("cx",width2)
     .attr("cy",160)
     .attr("r", 8)
-    .style("fill", "#4d91ff")
+    .style("fill", "#4d99ff")
     svg.append("circle")
     .attr("cx",width2)
     .attr("cy",190)
@@ -291,6 +294,7 @@ function bar_chart_gender(){
 }
 
 
+// ---------------------------------------- HPARALLEL GRAPH
 
 
 function parralel(){
@@ -444,7 +448,7 @@ function parralel(){
 }
 
 
-
+// ---------------------------------------- BUBBLE CHART
 
 
 function bubble(){
@@ -508,7 +512,6 @@ function bubble(){
     "Developer  desktop or enterprise applications",
     "Developer  QA or test",
     "Student",
-    "Developer  mobileEducator",
     "Engineering manager",
     "Database administrator",
     "Academic researcher",
@@ -547,157 +550,7 @@ function bubble(){
 }
 
 
-
-
-function piechart(){
-
-    
-    var data = [
-        {age: "Under 18 years old", number: 3866},
-        {age: "18-24 years old", number: 16646},
-        {age: "25-34 years old", number: 28112},
-        {age: "35-44 years old", number: 13988},
-        {age: "45-54 years old", number: 5281},
-        {age: "55-64 years old", number: 1978},
-        {age: "65 years or older", number: 554},
-        {age: "Prefer not to say", number: 521},
-    ];
-    var text = "";
-    
-    var width5 = document.getElementById('piechart').offsetWidth - 200;
-    var height5 = document.getElementById('piechart').offsetHeight - 200;
-    var thickness = 40;
-    var duration = 750;
-    var padding = 10;
-    var opacity = .8;
-    var opacityHover = 1;
-    var otherOpacityOnHover = .8;
-    var tooltipMargin = 13;
-    
-    var radius = Math.min(width5-padding, height5-padding) / 2;
-    var color = d3.scaleOrdinal(d3.schemeCategory10);
-    
-    var svg = d3.select("#piechart")
-    .append('svg')
-    .attr('class', 'pie')
-    .attr('width', width5)
-    .attr('height', height5);
-    
-    var g = svg.append('g')
-    .attr('transform', 'translate(' + (width5/2) + ',' + (height5/2) + ')');
-    
-    var arc = d3.arc()
-    .innerRadius(0)
-    .outerRadius(radius);
-    
-    var pie = d3.pie()
-    .value(function(d) { return d.number; })
-    .sort(null);
-    
-    var path = g.selectAll('path')
-    .data(pie(data))
-    .enter()
-    .append("g")  
-    .append('path')
-    .attr('d', arc)
-    .attr('fill', (d,i) => color(i))
-    .style('opacity', opacity)
-    .style('stroke', 'white')
-    .on("mouseover", function(d) {
-        d3.selectAll('path')
-            .style("opacity", otherOpacityOnHover);
-        d3.select(this) 
-            .style("opacity", opacityHover);
-    
-        let g = d3.select("svg")
-            .style("cursor", "pointer")
-            .append("g")
-            .attr("class", "tooltip")
-            .style("opacity", 0);
-    
-        g.append("text")
-            .attr("x", '5px')
-            .attr("y", '5px')
-            .attr("class", "name-text")
-            .text(`${d.data.age} (${d.data.number})`)
-            .attr('text-anchor', 'middle');
-        
-        let text = g.select("text");
-        let bbox = text.node().getBBox();
-        let padding = 2;
-        g.insert("rect", "text")
-            .attr("x", bbox.x - padding)
-            .attr("y", height5 + bbox.y - padding)
-            .attr("width", bbox.width + (padding*2))
-            .attr("height", bbox.height + (padding*2))
-            .style("fill", "white")
-            .style("opacity", 0.75);
-        })
-    .on("mousemove", function(d) {
-            let mousePosition = d3.mouse(this);
-            let x = mousePosition[0] + width5;
-            let y = mousePosition[1] + height5 - tooltipMargin;
-        
-            let text = d3.select('.tooltip text');
-            let bbox = text.node().getBBox();
-            if(x - bbox.width/2 < 0) {
-            x = bbox.width/2;
-            }
-            else if(width5 - x - bbox.width/2 < 0) {
-            x = width5 - bbox.width/2;
-            }
-        
-            if(y - bbox.height/2 < 0) {
-            y = bbox.height + tooltipMargin * 2;
-            }
-            else if(height5 - y - bbox.height/2 < 0) {
-            y = height5 - bbox.height/2;
-            }
-        
-            d3.select('.tooltip')
-            .style("opacity", 1)
-            .attr('transform',`translate(${x}, ${y})`);
-        })
-    .on("mouseout", function(d) {   
-        d3.select("svg")
-            .style("cursor", "none")  
-            .select(".tooltip").remove();
-        d3.selectAll('path')
-            .style("opacity", opacity);
-        })
-    .on("touchstart", function(d) {
-        d3.select("svg")
-            .style("cursor", "none");    
-    })
-    .each(function(d, i) { this._current = i; });
-    
-    let legend = d3.select("#piechart").append('div')
-                .attr('class', 'legend')
-                .style('margin-top', '30px');
-    
-    let keys = legend.selectAll('.key')
-                .data(data)
-                .enter().append('div')
-                .attr('class', 'key')
-                .style('display', 'flex')
-                .style('align-items', 'center')
-                .style('margin-right', '20px');
-    
-            keys.append('div')
-                .attr('class', 'symbol')
-                .style('height', '10px')
-                .style('width', '10px')
-                .style('margin', '5px 5px')
-                .style('background-color', (d, i) => color(i));
-    
-            keys.append('div')
-                .attr('class', 'name')
-                .text(d => `${d.age} (${d.number})`);
-    
-            keys.exit().remove();
-}
-
-
+// ---------------------------------------- SCATTER PLOT WITH SALARIES AND COMPANY SIZE
 
 
 function scatter(){
@@ -861,6 +714,304 @@ function scatter(){
 }
 
 
+// ---------------------------------------- PIE CHART WITH NUMBER OF ANWSERS BY AGE
+
+
+function piechart(){
+
+    var data = [
+        {age: "Under 18 years old", number: 3866},
+        {age: "18-24 years old", number: 16646},
+        {age: "25-34 years old", number: 28112},
+        {age: "35-44 years old", number: 13988},
+        {age: "45-54 years old", number: 5281},
+        {age: "55-64 years old", number: 1978},
+        {age: "65 years or older", number: 554},
+        {age: "Prefer not to say", number: 521},
+    ];
+      var text = "";
+      
+      var width = 400;
+      var height = 400;
+      var thickness = 40;
+      var duration = 750;
+      
+      var radius = Math.min(width, height) / 2;
+      var color = d3.scaleOrdinal(d3.schemeCategory10);
+      
+      var svg = d3.select("#piechart")
+      .append('svg')
+      .attr('class', 'pie')
+      .attr('width', width)
+      .attr('height', height);
+      
+      var g = svg.append('g')
+      .attr('transform', 'translate(' + (width/2) + ',' + (height/2) + ')');
+      
+      var arc = d3.arc()
+      .innerRadius(radius - thickness)
+      .outerRadius(radius);
+      
+      var pie = d3.pie()
+      .value(function(d) { return d.number; })
+      .sort(null);
+      
+      
+      
+      var path = g.selectAll('path')
+      .data(pie(data))
+      .enter()
+      .append("g")
+      .attr('class', 'test')
+      .on("mouseover", function(d) {
+            let g = d3.select('.text-group');
+       
+            g.select(".name-text")
+              .text(`${d.data.age}`)
+              .attr('text-anchor', 'middle')
+              .attr('dy', '-1.2em');
+        
+            g.select(".value-text")
+              .text(`${d.data.number}`)
+              .attr('text-anchor', 'middle')
+              .attr('dy', '.6em');
+          })
+        .on("mouseout", function(d) {
+            // d3.select(this)
+            //   .style("cursor", "none")  
+            //   .style("fill", color(this._current));
+          })
+        .append('path')
+        .attr('d', arc)
+        .attr('fill', (d,i) => color(i))
+        .on("mouseover", function(d) {
+            d3.select(this)     
+              .style("cursor", "pointer")
+              .style("fill", "black");
+          })
+        .on("mouseout", function(d) {
+            d3.select(this)
+              .style("cursor", "none")  
+              .style("fill", color(this._current));
+          })
+        .each(function(d, i) { this._current = i; });
+      
+      
+      g.append('text')
+        .attr('text-anchor', 'middle')
+        .attr('dy', '.35em')
+        .text(text);
+      
+        let x = d3.select('.test')
+              .style("cursor", "pointer")
+              .style("fill", "black")
+              .append("g")
+              .attr("class", "text-group");
+       
+            x.append("text")
+              .attr("class", "name-text")
+              .text(`${data[0].age}`)
+              .attr('text-anchor', 'middle')
+              .attr('dy', '-1.2em');
+        
+            x.append("text")
+              .attr("class", "value-text")
+              .text(`${data[0].number}`)
+              .attr('text-anchor', 'middle')
+              .attr('dy', '.6em');
+
+              let legend = d3.select("#piechart").append('div')
+              .attr('class', 'legend')
+              .style('margin-top', '30px');
+        
+        // LEGEND
+        let keys = legend.selectAll('.key')
+                    .data(data)
+                    .enter().append('div')
+                    .attr('class', 'key')
+                    .style('display', 'flex')
+                    .style('align-items', 'center')
+                    .style('margin-right', '20px');
+        
+                keys.append('div')
+                    .attr('class', 'symbol')
+                    .style('height', '20px')
+                    .style('width', '20px')
+                    .style('margin', '5px 5px')
+                    .style('background-color', (d, i) => color(i));
+        
+                keys.append('div')
+                    .attr('class', 'name')
+                    .text(d => `${d.age} (${d.number})`);
+        
+                keys.exit().remove();
+}
+
+
+// ---------------------------------------- HEATMAP
+
+
+function heatmap(){
+
+    // set the dimensions and margins of the graph
+    var margin8 = {top: 75, right: 100, bottom: 100, left: 175},
+    w8 = document.getElementById('heatmap').offsetWidth;
+    h8 = document.getElementById('heatmap').offsetHeight;
+    height8 = h8 - h8*(margin8.top/1000) - h8*(margin8.bottom/1000);
+    width8 = w8 - w8*(margin8.right/1000) - w8*(margin8.left/1000);
+
+    // append the svg object to the body of the page
+    var svg = d3.select("#heatmap")
+    .append("svg")
+    .attr("width", width8 + margin8.left + margin8.right)
+    .attr("height", height8 + margin8.top + margin8.bottom)
+    .append("g")
+    .attr("transform",
+        "translate(" + margin8.left + "," + margin8.top + ")");
+
+    // Labels of row and columns
+    var myGroups = ["Data scientist or machine learning specialist",
+    "Developer  front-end",
+    "Engineer  data",
+    "Engineer  site reliability",
+    "Developer  full-stack",
+    "Developer  back-end",
+    "Developer  desktop or enterprise applications",
+    "Developer  QA or test",
+    "Student",
+    "Engineering manager",
+    "Database administrator",
+    "Academic researcher",
+    "DevOps specialist",
+    "Other",
+    "Developer  embedded applications or devices",
+    "Developer  game or graphics",
+    "Project manager",
+    "Cloud infrastructure engineer",
+    "Data or business analyst",
+    "Designer",
+    "Scientist",
+    "Product manager",
+    "Senior Executive",
+    "System administrator",
+    "Blockchain",
+    "Marketing or sales professional",
+    "Security professional" ]
+
+    var myVars = ["0.5","1","2","3","4","5","6","7","8","9","10",
+    "11","12","13","14","15","16","17","18","19","20",
+    "21","22","23","24","25","26","27","28","29","30",
+    "31","32","33","34","35","36","37","38","39","40",
+    "41","42","43","44","45","46","47","48","49","50",
+    "60"]
+
+    // Build X scales and axis:
+    var x = d3.scaleBand()
+    .range([ 0, width8 ])
+    .domain(myGroups)
+    .padding(0.01);
+    svg.append("g")
+    .attr("transform", "translate(0," + height8 + ")")
+    .call(d3.axisBottom(x))
+    .selectAll("text")
+    .attr("transform", "translate(0,0)rotate(-25)")
+    .style("text-anchor", "end")
+    .style('font-size', '10px')
+    .attr("fill", "grey" );
+
+    // Build X scales and axis:
+    var y = d3.scaleBand()
+    .range([ height8, 0 ])
+    .domain(myVars)
+    .padding(0.01);
+    svg.append("g")
+    .call(d3.axisLeft(y))
+    .selectAll("text")
+    .attr("transform", "translate(0,0)rotate(0)")
+    .style("text-anchor", "end")
+    .style('font-size', '10px')
+    .attr("fill", "grey" );
+
+    // Build color scale
+    var myColor = d3.scaleLinear()
+    .range(["white", "#69b3a2"])
+    .domain([1,50000])
+
+    //Read the data
+    d3.csv("../job_salary_experience.csv", function(data) {
+
+    svg.selectAll()
+        .data(data, function(d) {return d.group+':'+d.variable;})
+        .enter()
+        .append("rect")
+        .attr("x", function(d) { return x(d.group) })
+        .attr("y", function(d) { return y(d.variable) })
+        .attr("width", x.bandwidth() )
+        .attr("height", y.bandwidth() )
+        .style("fill", function(d) { return myColor(d.value)} )
+
+    })
+
+    // Title
+    svg.append('text')
+    .attr('x', width/2)
+    .attr('y', -35)
+    .attr('text-anchor', 'middle')
+    .style('font-family', 'Helvetica')
+    .style('font-size', '22px')
+    .text('Salary (per year) by Developer Type according with Years of Experience')
+    .attr("fill", "white" );
+
+    // X label
+    svg.append('text')
+    .attr('x', width + 100)
+    .attr('y', height + 30)
+    .attr('text-anchor', 'middle')
+    .style('font-family', 'Helvetica')
+    .style('font-size', '12')
+    .text('Developer Type')
+    .attr("fill", "white" );
+    
+    // Y label
+    svg.append('text')
+    .attr('text-anchor', 'middle')
+    .attr('transform', 'translate(-20,-10)rotate(0)')
+    .style('font-family', 'Helvetica')
+    .style('font-size', '12')
+    .text('Years of Experience')
+    .attr("fill", "white" );
+
+    svg.append("circle")
+    .attr("cx",-150)
+    .attr("cy",130)
+    .attr("r", 6)
+    .style("fill", "black")
+    svg.append("circle")
+    .attr("cx",-150)
+    .attr("cy",160)
+    .attr("r", 6)
+    .style("fill", "white")
+
+    svg.append("text")
+    .attr("x", -140)
+    .attr("y", 130)
+    .text("Highest Salary")
+    .style("font-size", "12px")
+    .attr("alignment-baseline","middle")
+    .style("fill", "white")
+    svg.append("text")
+    .attr("x", -140)
+    .attr("y", 160)
+    .text("Lowest Salary")
+    .style("font-size", "12px")
+    .attr("alignment-baseline","middle")
+    .style("fill", "white")
+
+}
+
+
+
+
 function onChangeSelection(){
     
 }
@@ -869,3 +1020,4 @@ horizontalBarChart();
 bar_chart_gender();
 piechart();
 scatter();
+heatmap();
