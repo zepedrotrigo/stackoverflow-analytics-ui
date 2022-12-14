@@ -19,7 +19,7 @@ function horizontalBarChart() {
             "translate(" + margin.left + "," + margin.top + ")");
 
     // Parse the Data
-    d3.csv("../edLevel_avgSalary.csv", function (data) {
+    d3.csv("../dataset/education_level_average_salary.csv", function (data) {
 
         // Add X axis
         var x = d3.scaleLinear()
@@ -154,7 +154,7 @@ function bar_chart_gender() {
             "translate(" + margin2.left + "," + margin2.top + ")");
 
     // Parse the Data
-    d3.csv("../job_salary.csv", function (data) {
+    d3.csv("../dataset/job_salary.csv", function (data) {
 
         // List of subgroups = header of the csv files = soil condition here
         var subgroups = data.columns.slice(1)
@@ -319,7 +319,7 @@ function scatter() {
 
 
     //Read the data
-    d3.csv("../orgsize_salary.csv", function (data) {
+    d3.csv("../dataset/orgsize_salary.csv", function (data) {
 
         // Add X axis
         var x = d3.scaleBand()
@@ -362,7 +362,7 @@ function scatter() {
             .attr("r", 5)
             .style("fill", "#ff0000")
 
-        d3.csv("../orgsize_salaryALL.csv", function (data2) {
+        d3.csv("../dataset/orgsize_salaryALL.csv", function (data2) {
             // Add dots
             svg.append('g')
                 .selectAll("dot")
@@ -689,7 +689,7 @@ function heatmap() {
         .domain([1, 50000])
 
     //Read the data
-    d3.csv("../job_salary_experience.csv", function (data) {
+    d3.csv("../dataset/job_salary_experience.csv", function (data) {
 
         svg.selectAll()
             .data(data, function (d) { return d.group + ':' + d.variable; })

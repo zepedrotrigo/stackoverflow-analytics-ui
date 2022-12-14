@@ -18,10 +18,10 @@ for l in urlopen("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/mast
 # ---------------------------------------------------------------------------- #
 
 def split_data_by_country():
-    with open("../survey.csv", 'r') as f:
+    with open("survey.csv", 'r') as f:
         headers = f.readline()
 
-    with open("../survey.csv", 'r') as file:
+    with open("survey.csv", 'r') as file:
         csvreader = csv.DictReader(file)
 
         for row in csvreader:
@@ -49,7 +49,7 @@ def calc_avg_salary_by_country():
     c = CurrencyConverter()
     d = {} # {"Country": [SumOfCompTotal, NoOfRespondents]}
 
-    with open("../survey.csv", 'r') as f:
+    with open("survey.csv", 'r') as f:
         csvreader = csv.DictReader(f)
 
         for row in csvreader:
@@ -97,7 +97,7 @@ def avg_salary_by_country_by_job():
     template_countries_dict = {'Andorra': [], 'Argentina': [], 'Armenia': [], 'Australia': [], 'Austria': [], 'Bangladesh': [], 'Belarus': [], 'Belgium': [], 'Brazil': [], 'Bulgaria': [], 'Cambodia': [], 'Canada': [], 'China': [], 'Croatia': [], 'Cuba': [], 'Cyprus': [], 'Czech Republic': [], 'Democratic Republic of the Congo': [], 'Denmark': [], 'Ecuador': [], 'El Salvador': [], 'Estonia': [], 'Finland': [], 'France': [], 'Germany': [], 'Ghana': [], 'Greece': [], 'Hong Kong (S.A.R.)': [], 'Hungary': [], 'India': [], 'Indonesia': [], 'Iran, Islamic Republic of...': [], 'Iraq': [], 'Ireland': [], 'Israel': [], 'Italy': [], 'Jamaica': [], 'Japan': [], 'Kosovo': [], 'Latvia': [], 'Lebanon': [], 'Lithuania': [], 'Luxembourg': [], 'Malaysia': [], 'Malta': [], 'Mexico': [], 'Mongolia': [], 'Montenegro': [], 'Myanmar': [], 'Nepal': [], 'Netherlands': [], 'New Zealand': [], 'Nicaragua': [], 'Norway': [], 'Pakistan': [], 'Palestine': [], 'Panama': [], 'Philippines': [], 'Poland': [], 'Portugal': [], 'Republic of Korea': [], 'Republic of Moldova': [], 'Romania': [], 'Russian Federation': [], 'Saudi Arabia': [], 'Serbia': [], 'Singapore': [], 'Slovakia': [], 'Slovenia': [], 'South Africa': [], 'South Korea': [], 'Spain': [], 'Sri Lanka': [], 'Suriname': [], 'Sweden': [], 'Switzerland': [], 'Taiwan': [], 'Tajikistan': [], 'Thailand': [], 'Turkey': [], 'Turkmenistan': [], 'Ukraine': [], 'United Arab Emirates': [], 'United Kingdom of Great Britain and Northern Ireland': [], 'United States of America': [], 'Uruguay': [], 'Uzbekistan': [], 'Venezuela, Bolivarian Republic of...': [], 'Viet Nam': [], 'Zimbabwe': []}
     d = {} # {"Job":  {"Country1": [salary1,salary2,...], ...}}
 
-    with open("../survey.csv", 'r') as f:
+    with open("survey.csv", 'r') as f:
         csvreader = csv.DictReader(f)
 
         for row in csvreader:
